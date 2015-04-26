@@ -18,7 +18,7 @@ module.exports = function (grunt) {
                     templateBasePath: /templates\//
                 },
                 files: {
-                  "js/scripts/templates.js": "**/*.handlebars"
+                  "js/dist/templates.js": "**/*.handlebars"
                 }
             }
         },
@@ -33,6 +33,13 @@ module.exports = function (grunt) {
                 }
             }
         },
+        uglify: {
+          my_target: {
+            files: {
+              "js/dist/app.js":  ["js/src/application.js","js/src/router.js","js/src/routes/*","js/src/models/*","js/src/views/*","js/src/controllers/*","js/src/components/*","js/src/fixtures/*"]
+            }
+          }
+        },
         watch: {
             files: [
                 'index.html',
@@ -43,8 +50,12 @@ module.exports = function (grunt) {
                 tasks: ['emberTemplates']
             },
             stylus: {
-                files: ['css/stylus/*.styl'],
+                files: ['css/**/*.styl'],
                 tasks: ['stylus']
+            },
+            uglify: {
+                files: ["js/src/application.js","js/src/router.js","js/src/routes/*","js/src/models/*","js/src/views/*","js/src/controllers/*","js/src/components/*","js/src/fixtures/*"],
+                tasks: ['uglify']
             },
             livereload: {
                 options: { livereload: LIVERELOAD_PORT },
@@ -78,6 +89,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'stylus',
+        'uglify',
         'emberTemplates',
         'server'
     ]);

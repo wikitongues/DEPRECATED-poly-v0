@@ -1,5 +1,252 @@
-@media all and (max-width:900px) {
+@media only screen and (max-device-width: 480px)
+  $hover = initial !important
+  body
+    padding-top 0 !important
 
-	
+    nav
+      top initial
+      position initial
+      z-index initial
 
-}
+      div.logo
+        width 100%
+
+        li
+          width inherit
+
+          img
+            float none
+            display block
+            margin auto
+            padding 5px 5px 0 5px
+
+      ul.top-nav
+        width 100%
+
+        li
+          padding 18px 0 19px 0
+          white-space nowrap
+          text-align center
+          font-weight 400
+          width 33%
+
+          a
+            font-weight 400 !important
+
+          &:first-of-type
+            display none
+
+    .container
+      overflow hidden
+      height 100%
+      width 100%
+
+      .banner
+        width 167%
+
+        &.index
+          background-image url("../img/banner-mobile.jpg")
+          max-height 125px
+          width 100%
+
+        &.mission
+          max-height 240px
+
+        &.team
+          max-height 240px
+          width 100%
+          background-position-x 52%
+
+        &.getInvolved
+          max-height 300px
+          width 100%
+          background-position-x 52%
+
+      .subheader
+        max-height 75px
+        overflow-x scroll
+        ul
+          width 375px
+          li
+            font-weight 400
+
+      .page
+        padding 0
+
+        h1
+          font-weight 400
+
+        ul.activities
+              margin 0
+              li
+                float none
+                width 100%
+
+                button, a
+                  font-size 1em
+                  margin-top 1em
+
+        &.index
+          padding 1px 30px 2em 30px
+
+          .information
+            h1
+              font-size 1.3em
+
+            a.youTubeLink
+              img
+                width 120%
+                margin-left -10%
+
+              .triangle
+                margin -16px
+                border-width 20px 0 20px 33px
+                top 0
+                margin -42% -16px 37%
+
+        &.mission
+          padding 0 30px 30px 30px
+          float left
+
+          .excerpt
+            margin-top 0
+            margin-bottom 30px
+            float inherit
+
+            p
+              padding 0 30px
+
+              &:first-of-type
+                margin-top 0
+
+        &.team
+          padding 0 30px 30px 30px
+
+          h1
+            font-size 1.1em
+
+          ul
+            width 100%
+
+            li
+              width 100%
+              margin 20px 0
+
+              img
+                padding 0
+
+              p
+                font-size 0.8em
+
+        &.legal
+          padding 0 30px 30px 30px
+          float left
+
+          h1
+            float left
+            width 100%
+            font-size 1.4em
+            margin 0.8em 0
+
+        &.getInvolved
+          padding 20px 30px 50px 30px
+
+          h1
+            display none
+
+          p
+            margin-bottom 0
+            float none
+            width 90%
+
+        &.form
+          padding 0 30px 50px 30px !important
+
+          form
+            h1
+              display none
+
+            p
+              margin-top 0
+
+            .guidelines
+              .page
+                max-width 120%
+                padding 20px
+                margin -10%
+                font-size 0.7em
+
+                button
+                  margin-bottom 20px
+
+                ul
+                  li
+                    h4
+                      margin-bottom .7em
+
+                    table
+                      width 100%
+
+            ul
+              float left
+
+              li
+                input, label
+                  margin 0
+                  font-size .7em
+
+                &.checkbox
+                  input
+                    margin 11px 0 11px 10px
+
+                  label
+                    width 80%
+
+            textarea
+              margin 0
+              font-size .7em
+
+            .alt-email
+              text-align left
+              margin 3em 0
+
+      .success
+        background rgba(255,255,255,.8)
+
+        .modal
+          width 100%
+          margin-left -50%
+          top 40%
+          border-bottom 1px solid $hover
+
+          h1
+            font-size 1.6em
+
+          p
+            font-size 1.2em
+
+    footer
+      font-size 1em
+
+      .links
+        text-align center
+        width 100%
+
+        ul
+          float none
+          margin-bottom 20px
+
+          li
+            font-size 1em
+            line-height 1.5em
+            font-weight 400
+
+            a
+              font-weight 400 !important
+
+      .copyright
+        margin 20px 0 20px 0
+
+        li
+          a
+            font-weight 400 !important

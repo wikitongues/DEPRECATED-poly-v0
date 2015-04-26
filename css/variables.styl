@@ -5,18 +5,18 @@ $transition-time = 0.2s
 $radius = 2px
 
 button()
-  font-family 'Lora',serif
+  font-family 'Open Sans', sans-serif
   display inline-block
   resize none
   outline none
   margin 2em initial 0
-  padding 1em
+  padding .7em
   cursor pointer
   text-align center
   border-radius $radius
-  background lighten($blue, 95%)
-  border 1px solid lighten($blue, 92%)
+  background lighten($hover, 40%)
+  border none
 
   &:hover
-    background lighten($blue, 90%)
-    border 1px solid lighten($blue, 89%)
+    background $hover
+    // border 1px solid lighten($blue, 89%)

@@ -1,0 +1,1 @@
+App.LegalRoute = Ember.Route.extend(App.ResetScroll)

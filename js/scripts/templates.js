@@ -43,7 +43,7 @@ function program7(depth0,data) {
 function program9(depth0,data) {
   
   
-  data.buffer.push("© 2014 Wikitongues, Inc., All Rights Reserved");
+  data.buffer.push("© 2015 Wikitongues, Inc., All Rights Reserved");
   }
 
 function program11(depth0,data) {

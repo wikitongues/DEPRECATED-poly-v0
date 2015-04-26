@@ -1,3 +1,4 @@
+
 # Compiled source #
 ###################
 *.com
@@ -37,3 +38,6 @@ ehthumbs.db
 Thumbs.db
 
 node_modules
+
+template_project
+

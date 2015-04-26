@@ -220,7 +220,7 @@ function program5(depth0,data) {
   data.buffer.push("\n          <p class=\"empty\">Shoot! There is nothing here!</p>\n        ");
   }
 
-  data.buffer.push("<section class=\"page poly\">\n  ");
+  data.buffer.push("x<section class=\"page poly\">\n  ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("a"),
     'class': ("back")

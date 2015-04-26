@@ -1,0 +1,78 @@
+<section class="page poly">
+  {{#link-to "books" tagName="a" class="back"}}Back{{/link-to}}
+  <section class="app">
+    <nav class="top-navigation">
+      <a title="Save"></a>
+      <p>{{phraseCount}}</p>
+      <div class="rightSubNav">
+        <a title="More"></a>
+        <a title="Settings"></a>
+        <div class="moreNavItems">
+          <a title="Share"></a>
+          <a title="Embed"></a>
+          <a title="Location"></a>
+        </div>
+      </div>
+    </nav>
+    <section class="banner">
+      <img {{bind-attr src="bannerUrl" alt="User"}} class="fallback">
+    </section>
+    <nav class="language-navigation">
+      <h1 class="source"><a>{{sourceName}}</a></h1>
+      <a class="direction">></a>
+      <h1 class="target"><a>{{targetName}}</a></h1>
+    </nav>
+    <section class="phrases">
+      <ul class="entries">
+        {{#each phrases}}
+          <li class="entry">
+            <ul>
+              <li class="source">
+                <p>{{sourcePhrase}}</p>
+                <div class="options-wrapper">
+                  <div class="options">
+                    <a href="">
+                      <img src="img/poly/sound.svg" alt="">
+                    </a>
+                    {{!-- <a href="">
+                      <img src="img/poly/gender-f.svg" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/poly/gender-m.svg" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/poly/new.svg" alt="">
+                    </a> --}}
+                  </div>
+                </div>
+              </li>
+              <li class="target">
+                <p>{{targetPhrase}}</p>
+                <div class="options-wrapper">
+                  <div class="options">
+                    <a href="">
+                      <img src="img/poly/sound.svg" alt="">
+                    </a>
+                    {{!-- <a href="">
+                      <img src="img/poly/gender-f.svg" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/poly/gender-m.svg" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/poly/new.svg" alt="">
+                    </a> --}}
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          {{else}}
+          <p class="empty">Shoot! There is nothing here!</p>
+        {{/each}}
+      </ul>
+      <button><a>+</a></button>
+    </section>
+  </section>
+</section>
+

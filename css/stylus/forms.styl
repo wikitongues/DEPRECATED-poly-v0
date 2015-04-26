@@ -1,0 +1,137 @@
+.form
+  padding-bottom 10em !important
+
+  .contact-form
+
+    input
+
+      &:first-child
+        margin-bottom 6px
+
+  p
+    float left
+
+  a
+    font-weight 100
+
+  .secondaryLink
+    cursor pointer
+
+  input, textarea, label
+    font-size 0.8em
+    font-family 'Lora', serif
+    display inline-block
+    border none
+    background lighten($secondary-blue, 90%)
+    width 100%
+    resize none
+    padding 1em 1em
+    border-radius $radius
+    outline none
+    border 1px solid transparent
+
+    &:hover
+      background lighten($secondary-blue, 95%)
+      border 1px solid lighten($secondary-blue, 88%)
+
+  ul
+    width 100%
+    display inline-block
+    padding 0
+    list-style-type none
+
+    li
+      display inline-block
+      width 100%
+      margin-bottom 5px
+      float left
+
+      &.checkbox
+        background lighten($secondary-blue, 90%)
+        border-radius 2px
+
+        input[type=checkbox]
+          width 3%
+          float left
+          margin 23px 0 0 2%
+
+        label
+          background none
+          width 95%
+          padding-left 0.5em
+          float right
+          color #A9A9A9
+          cursor pointer
+
+        input[type=checkbox]:checked + label
+          color $blue
+
+  textarea
+    min-height 150px
+    float left
+
+  .submit
+    button()
+    width 100%
+    font-size 1.3em
+
+  .alt-email
+    font-size .8em
+    color $secondary-blue
+    text-align center
+    margin 3em 0
+    max-width 100%
+
+.success
+  display none
+  position fixed
+  z-index 50
+  top 0
+  bottom 0
+  left 0
+  right 0
+  background rgba(255,255,255,0.8)
+
+  .modal
+    background $hover
+    padding 0
+    border none
+    width 600px
+    position fixed
+    top 50%
+    left 50%
+    margin-left -300px
+    margin-top -124px
+    font-family 'Open Sans', sans-serif
+    box-shadow 0 0 10px 4px rgba(0,0,0,.1)
+
+    &:hover
+      background $hover
+      border none
+
+    h1, p
+      text-align center
+      margin 20px
+
+    h1
+      margin-top 30px
+      font-size 2em
+
+    p
+      margin-bottom 40px
+      font-size 1.5em
+
+    button
+      margin 0
+      border-radius 0 0 $radius $radius
+      width 100%
+      background white
+      border 1px solid lighten($secondary-blue, 90%)
+      border-top none
+      padding 1em
+      display block
+      font-size 1.5em
+      font-family 'Open Sans', sans-serif
+      font-weight 700
+      outline none
+      cursor pointer

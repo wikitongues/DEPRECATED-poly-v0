@@ -1,0 +1,26 @@
+<section class="banner">
+    <img {{bind-attr src="image"}} alt="Wikitongues" class="fallback">
+</section>
+<section class="page index">
+    <div class="information">
+        <h1>Every language in the world</h1>
+        <a class="youTubeLink" href="https://www.youtube.com/user/WikiTongues" target="_blank">
+            <img {{bind-attr src="youTubeLink"}}>
+            <div class="triangle"></div>
+            <p>Join us on YouTube</p>
+        </a>
+        <br>
+        <p>Wikitongues is a global effort to record and provide access to every language in the world. We’re a network of volunteers on every continent who work to bring you new language videos every week, driven by a commitment to the value of diversity. Be a part of our movement.</p>
+        <ul class="activities">
+          <li>
+            {{#link-to "submit" tagName="button"}}Submit a video{{/link-to}}
+          </li>
+          <li>
+            {{#link-to "volunteer" tagName="button"}}Become a volunteer{{/link-to}}
+          </li>
+          <li>
+            <a href="https://www.fracturedatlas.org/site/fiscal/profile?id=11735" target="_blank">Support us</a>
+          </li>
+        </ul>
+    </div>
+  </section>

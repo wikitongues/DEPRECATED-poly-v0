@@ -1,0 +1,391 @@
+.page.poly
+  background #fafafa
+  width 100% !important
+  max-width 100% !important
+  padding-top 0
+  padding-bottom 0
+  float left
+
+  a.back
+    float left
+
+  .app
+    border-radius $radius
+    background #f4f4f4
+    border 1px solid #e8e8e8
+    margin 20px  auto
+    width 350px
+    height 600px
+    overflow-x hidden
+    overflow-y scroll
+    box-shadow 0 5px 4px 1px rgba(0,0,0,.1)
+
+    section.banner
+      border none
+      height 220px
+      width 100%
+
+      &:hover
+        height 230px
+        transition height ease-in-out 2*$transition-time
+
+        img
+          margin-top -25%
+          transition margin-top ease-in-out 2*$transition-time
+
+      img
+        margin-top -23%
+
+    nav
+      width 100%
+      position initial
+      top initial
+      background #fff
+      border-bottom 2px solid lighten($blue, 90%)
+      z-index 5
+
+      &.top-navigation
+        height 40px
+
+        p
+          float left
+          display block
+          width auto
+          margin 0
+          padding 0.5em 1em
+
+        &:hover
+          margin-top 0
+
+        .rightSubNav
+          float right
+
+          .moreNavItems
+            height 40px
+            width 120px
+            position absolute
+            margin-left -120px
+            display none
+
+            a
+              position static
+              float left
+
+        a
+          cursor pointer
+          padding 11px
+          height 40px
+          width 40px
+          text-align center
+          display block
+          float left
+          color $blue
+          background-image url("../img/poly-icons.svg") !important
+          background-size 240px
+          transition background-position-y
+          background-position-y -2px
+
+          &:hover
+            background-position-y -42px
+            transition background-position-y 0s linear
+
+          &[title~="Share"]
+            background-position-x -40px
+
+          &[title~="Embed"]
+            background-position-x -80px
+
+          &[title~="Location"]
+            background-position-x -120px
+
+          &[title~="Settings"]
+            background-position-x -160px
+
+          &[title~="More"]
+            background-position-x -200px
+
+            &:hover
+              transform rotate(-.25turn)
+              transition transform $transition-time ease-in-out
+
+      &.language-navigation
+        border-bottom 3px solid lighten($blue, 90%)
+
+        &.sticky
+          h1
+            font-size 0.8em
+
+          a.direction
+            font-size 0.7em
+            margin-top 3px
+            padding 4px
+            height 18px
+            width 18px
+
+        a.direction
+          color $hover
+          width 6%
+          float left
+          font-size 1.8em
+          font-weight bold
+          text-align center
+          height 22px
+          padding 0
+          line-height 1.1em
+          border-radius 100%
+          font-size 1.4em
+          margin-top 0.7em
+
+        h1
+          cursor pointer
+          width 47%
+          float left
+          margin 0
+          font-size 1.6em
+
+          a
+            height 100%
+            padding .4em .8em
+            display block
+            text-transform capitalize
+
+    .phrases
+      display inline-block
+      padding .1em 0 0 0
+      width 100%
+      font-family 'Open Sans',helvetica,sans-serif
+
+      // ul
+      //   display inline-block
+      //   width 100%
+
+        // li
+        //   width inherit
+        //   float left
+        //   padding .6em 0
+        //   border 0px solid lighten($blue, 89%)
+
+        //   &:hover
+        //     background lighten($blue, 92%)
+        //     border-top 3px solid lighten($blue, 89%)
+        //     border-bottom 3px solid lighten($blue, 89%)
+
+        //   p
+        //     clear both
+        //     width 100%
+        //     margin 0
+
+        //     &.phrase-source
+        //       float left
+        //       padding 0 0.5em
+        //       margin-bottom .1em
+
+        //       a
+        //         background #BCDBFE
+        //         border-radius 51px 51px 51px 0
+        //         border 1px solid transparent
+
+        //         &:hover
+        //           background lighten(#BCDBFE, 6%)
+        //           border-color darken(#BCDBFE, 3%)
+
+        //     &.phrase-target
+        //       float right
+        //       text-align right
+        //       padding 0 0.5em
+
+        //       a
+        //         background lighten($secondary-blue, 25%)
+        //         border-radius 51px 51px 0 51px
+        //         border 1px solid transparent
+
+        //         &:hover
+        //           background lighten($secondary-blue, 31%)
+        //           border-color lighten($secondary-blue, 18%)
+
+        //     a
+        //       padding .5em .8em
+        //       font-size .75em
+
+        //       &:hover
+        //         color $blue !important
+
+      ul.entries
+        font-family 'Open Sans', sans-serif
+        clear both
+        width 100%
+        padding 0
+        font-size 0.6em
+        background #fafafa
+
+        p.empty
+          text-align center
+          color $secondary-blue
+          margin-bottom 180px
+
+        li.entry
+          width 100%
+          display inline-block
+          padding 1em 0
+
+          &:last-of-type
+            border-bottom none
+
+          &:hover
+            background #f6f6f6
+
+          ul
+            display inline-block
+            width 100%
+            padding 0
+
+            li
+              display inline-block
+              width 100%
+              float left
+
+              &:hover
+                .options-wrapper
+                    width 80px
+
+              p
+                width initial
+                display inline-block
+                margin 0
+                padding .7em 1em
+                position relative
+                z-index 1
+
+                &:hover
+                  cursor pointer
+                  box-shadow 0 3px 4px 1px #ccc
+
+              &.source
+                p
+                  box-shadow 0 3px 4px 0 #ddd
+                  border-radius 21px 21px 21px 0
+                  float left
+                  background #C4CDD1
+                  border darken(#C4CDD1, 5%)
+                  margin-left .5em
+
+                  &:hover
+                    background darken(#C4CDD1, 10%)
+
+                .options-wrapper
+                  margin-left -23px
+                  float left
+
+                  .options
+                    border-radius 0 22px 22px 0
+                    margin-left -220px
+                    padding-left 40px
+                    float left
+
+                &:hover
+                  .options-wrapper
+                    .options
+                      margin-left -20px
+
+                span.circle
+                  float left
+                  margin-right 0
+
+              &.target
+                p
+                  box-shadow 0 3px 4px 0 #ccc
+                  border-radius 21px 21px 0 21px
+                  float right
+                  background #BBDBFD
+                  border-color 1px solid darken(#BBDBFD, 40%)
+                  margin-right .5em
+
+
+                  &:hover
+                    background darken(#bbdbfd, 10%)
+
+                .options-wrapper
+                  margin-right -23px
+                  float right
+
+                  .options
+                    border-radius 22px 0 0 22px
+                    margin-right -220px
+                    padding-right 40px
+                    float right
+
+                &:hover
+                  .options-wrapper
+                    .options
+                      margin-right -20px
+
+                span.circle
+                  float right
+                  margin-left 0
+
+              span.circle
+                margin 1.2em .5em
+                border-radius 100%
+                width 10px
+                height 10px
+                float left
+                border 1px solid #C5C9CB
+                display block
+
+                &:hover
+                  cursor pointer
+                  background #C5C9CB
+
+              .options-wrapper
+                width 0
+                overflow hidden
+                display inline-block
+                height 47px
+
+                .options
+                  width 80px
+                  display inline-block
+                  background #fff
+                  border darken(#f9f9f9, 7%)
+                  box-shadow 0 2px 3px 0 #ddd
+                  position relative
+                  z-index 0
+
+                  a
+                    display inline-block
+                    float left
+                    border-radius 100%
+                    padding 6px
+
+                    img
+                      float left
+                      height 30px
+                      width 30px
+
+                    &:hover
+                      background #fff
+
+      button
+        background none
+        border none
+        width 100%
+        font-size 1em
+        height 2.5em
+        float left
+        padding 0
+
+        a
+          height 40px
+          width 40px
+          padding 4px 13px 8px
+          border-radius 100%
+          margin 0 auto
+          display block
+          color $hover
+          background #fff
+          box-shadow 0 5px 4px 1px rgba(0,0,0,.1)
+
+          &:hover
+            box-shadow 0 5px 4px 1px rgba(0,0,0,.2)
+            background lighten($hover, 40%)
+            color $blue

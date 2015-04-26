@@ -1,0 +1,49 @@
+footer
+  background-color $blue
+  font-family 'Open Sans', sans-serif
+  display table-row
+  width 100%
+  line-height 1.4em
+  padding 20px
+  float left
+
+  ul.copyright
+    float left
+    margin 0 0 0 20px
+    padding 0
+
+    li
+      float left
+      display inline-block
+      clear both
+
+    img.icon
+      height 30px
+      margin 0 0 -8px -5px
+
+  .footerLink
+    font-size .8em
+    font-weight 100
+    color darken($secondary-blue, 30%)
+    cursor pointer
+
+    &:hover
+        color $hover
+
+  .links
+    float right
+
+    ul
+      float left
+      list-style-type none
+      padding 0
+      margin 0 20px
+
+    li
+      &:not(.footerLink)
+        color white
+
+      &.footerLink
+        a
+          color inherit
+          font-weight 100 !important

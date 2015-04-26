@@ -1,0 +1,24 @@
+<section class="books">
+  <div class="appContainer">
+    <p>People you follow</p>
+    {{#each}}
+      <section class="app">
+        <section class="presentation">
+          <h2 {{bind-attr title="title"}}>{{title}}</h2>
+          <p class="number">{{phrasesCount}}</p>
+        </section>
+        <section class="banner">
+          {{#link-to "book" this tagName="a"}}
+            <img {{bind-attr src="bannerUrl"}}/>
+          {{/link-to}}
+        </section>
+
+        <nav class="language-navigation">
+          <h1 class="source"><a href="#">{{sourceName}}</a></h1>
+          <a href="#" class="direction">></a>
+          <h1 class="target"><a href="#">{{targetName}}</a></h1>
+        </nav>
+      </section>
+    {{/each}}
+  </div>
+</section>

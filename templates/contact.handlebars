@@ -1,0 +1,22 @@
+{{get-involved-subheader}}
+<section class="page form">
+  <form action="" class="contact-form">
+    <h1>Contact</h1>
+    <p>We're always eager to hear from you</p>
+    <ul>
+      <li>{{input title="Name" required="true" value=view.name placeholder="Name (Required)"}}</li>
+      <li>{{input title="Email"required="true" type="email" value=view.email placeholder="Email (Required)"}}</li>
+    </ul>
+    {{textarea title="Message"value=view.message placeholder="Message (optional)"}}
+    <button class="submit" type="submit" {{action "submit" target=view}}>Send</button>
+    {{get-involved-email}}
+  </form>
+</section>
+{{!-- {{form-modal title=title text=text}} --}}
+<section class="success">
+    <div class="modal">
+      <h1>Thank you for your message!</h1>
+      <p>We're glad you reached out.</p>
+      <button {{action "closeModal"}}>Okay!</button>
+    </div>
+</section>

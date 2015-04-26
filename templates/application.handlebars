@@ -1,0 +1,63 @@
+<nav>
+  <div class="logo">
+    {{#link-to "index" tagName="li"}}
+      <img src="img/logos/horizontalLockup.svg" alt="Wikitongues">
+    {{/link-to}}
+  </div>
+  <ul class="top-nav">
+    {{#link-to "index" tagName="li"}}Home{{/link-to}}
+    {{#link-to "mission" tagName="li"}}About{{/link-to}}
+    {{!-- {{#link-to "expeditions" tagName="li"}}Expeditions{{/link-to}} --}}{{!-- Expeditions should live inside of Projects --}}
+    {{!-- {{#link-to "projects" tagName="li"}}Projects{{/link-to}} --}}
+    {{#link-to "get_involved" tagName="li"}}Get Involved{{/link-to}}
+    <li class="donate">
+      <a href="https://www.fracturedatlas.org/site/fiscal/profile?id=11735" target="_blank">Support Us</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  {{outlet}}
+</div>
+
+<footer>
+  <div class="content-wrapper">
+    <ul class="copyright">
+      <li>
+        <img src="img/logos/horizontalLockupWhite.svg" class="icon" alt="">
+      </li>
+      <li>
+        {{#link-to "index"classNames="footerLink"}}© 2014 Wikitongues, Inc., All Rights Reserved{{/link-to}}
+      </li>
+      <li>
+        <a href="https://www.fracturedatlas.org" class="footerLink" target="_blank">Fiscal Sponsorship by Fractured Atlas</a>
+      </li>
+    </ul>
+
+    <div class="links">
+        <ul>
+            <li class="header">Organization</li>
+            {{#link-to "mission" classNames="footerLink" tagName="li"}}About{{/link-to}}
+            {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
+            {{!-- {{#link-to "expeditions" classNames="footerLink" tagName="li"}}Expeditions{{/link-to}} --}}
+            {{!-- {{#link-to "projects" classNames="footerLink" tagName="li"}}Projects{{/link-to}} --}}
+            {{!-- {{#link-to "press" classNames="footerLink" tagName="li"}}Press{{/link-to}} --}}
+            {{#link-to "legal" classNames="footerLink" tagName="li"}}Legal{{/link-to}}
+        </ul>
+        <ul>
+            <li class="header">Get involved</li>
+            {{#link-to "submit" classNames="footerLink" tagName="li"}}Submit a video{{/link-to}}
+            {{#link-to "volunteer" classNames="footerLink" tagName="li"}}Volunteer{{/link-to}}
+            {{#link-to "contact" classNames="footerLink" tagName="li"}}Contact{{/link-to}}
+        </ul>
+        <ul>
+            <li class="header">Follow us</li>
+            <li class="footerLink"><a target="_blank" href="https://youtube.com/user/WikiTongues">Youtube</a></li>
+            <li class="footerLink"><a target="_blank" href="https://www.facebook.com/wikitongues">Facebook</a></li>
+            <li class="footerLink"><a target="_blank" href="https://twitter.com/wikitongues">Twitter</a></li>
+            <li class="footerLink"><a target="_blank" href="http://wikitongues.tumblr.com/">Tumblr</a></li>
+            <li class="footerLink"><a target="_blank" href="http://instagram.com/wikitongues">Instragram</a></li>
+        </ul>
+    </div>
+  </div>
+</footer>

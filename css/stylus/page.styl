@@ -1,0 +1,142 @@
+*
+  box-sizing border-box
+  font-weight 100
+  color $blue
+  transition all ease-in-out $transition-time
+
+// COMMENTS
+b
+  color red
+
+a
+  text-decoration none
+  color $blue
+
+  &:hover
+    color $hover
+
+.hidden
+  display none !important
+
+html, body
+  width 100%
+  height 100%
+  margin 0
+  padding 0
+
+body
+  padding-top 56px
+  background $blue
+
+  &.modalFreeze
+    overflow hidden
+
+.container
+  background #fff
+
+.page
+  font-family 'Lora', serif
+  font-size 1.4em
+  max-width 960px
+  margin auto
+  padding 30px
+  padding-bottom 5em
+  clear both
+
+  h1
+    font-family 'Open Sans', helvetica, sans-serif
+    font-weight 100
+    text-transform uppercase
+    text-align center
+    font-size 2em
+
+  img
+    border-radius $radius
+    width 100%
+
+  ul
+    margin 0
+    padding 0
+
+  ul
+    list-style-type none
+
+  p
+    max-width 800px
+    width 100%
+    margin 20px auto
+    line-height 1.8em
+    letter-spacing 0.4px
+
+    &.quote
+      font-size 1.7em
+      color $secondary-blue
+      padding 20px
+
+    &.caption
+      color #b7bcbf
+      text-align center
+
+    &.link
+      cursor pointer
+
+      &:hover
+        color $hover
+
+  .excerpt
+    margin 9px 0 100px 0
+
+    p
+      padding 0 100px
+      font-style italic
+
+  .drop
+    &:first-letter
+      float left
+      color $hover
+      font-size 3.5em
+      line-height 3px
+      padding-top 4px
+      padding-right 8px
+      padding-left 3px
+      line-height 0.9em
+
+  .secondaryLink
+    float left
+    font-size .8em
+    color $secondary-blue
+    margin-bottom 2em
+
+    &:hover
+      color $hover
+
+  .activities
+    width 100%
+    display inline-block
+    list-style-type none
+    padding 0
+    margin 45px 0 0
+
+    li
+      display inline-block
+      width 32%
+      margin 0 .5%
+      float left
+
+      &:first-child
+        button
+          margin-left 0
+
+      button, a
+        font-weight 100
+        font-size 1em
+        margin 0 .5%
+        width 100%
+        button()
+
+        &:hover
+          color initial
+
+      a
+        p
+          margin 0

@@ -204,31 +204,5 @@ App.Book.FIXTURES = [
     saves: 0,
     shares: 0,
     embeds: 0
-  },{
-    id:10008,
-    language: "eng",
-    dateCreated: "1/15/15",
-    lastEdited: "Today",
-    createdBy: "Plator Gashi",
-    location: "New York, NY, USA",
-    release: "Public",
-    sourceISO: "ENG",
-    sourceName: "English",
-    targetISO: "DEU",
-    targetName: "German",
-    phrases: [],
-    title: "Winter Olympics: German",
-    banner: true,
-    bannerUrl: "img/faces/liam.jpg",
-    sounds: false,
-    videos: false,
-    editing: false,
-    comments: false,
-    // phraseCount: 0,
-    views: 0,
-    saves: 0,
-    shares: 0,
-    embeds: 0
   }
-
 ]

@@ -262,7 +262,7 @@ function program2(depth0,data) {
   data.buffer.push("<section class=\"books\">\n  <div class=\"appContainer\">\n    <p>People you follow</p>\n    ");
   stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  </div>\n</section>\n");
+  data.buffer.push("\n\n    <section class=\"app\">\n      <button class=\"newBook\">\n        <p>New book</p>\n      </button>\n    </section>\n  </div>\n</section>\n");
   return buffer;
   
 });

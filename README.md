@@ -16,3 +16,9 @@ NYTM
 [Content](http://www.youtube.com/wikitongues/videos)
 
 [Google Translate](https://translate.google.com/)
+
+To Do's
+* create a back end
+  * implement saving input
+  * implement creating new books
+  * implement saving audio

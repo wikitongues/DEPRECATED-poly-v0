@@ -1,9 +1,9 @@
 Wikitongues Phrasebooks, V0
 ==============
 
-###Requires Grunt CLI
+Requires [Grunt CLI](https://www.npmjs.com/package/grunt-cli)
 
-####Make sure to run `npm install` and `bower install`
+Make sure to run `npm install` and `bower install`
 
 Start project with:
 
@@ -13,5 +13,6 @@ Go to [http://localhost:3000](http://localhost:3000)
 
 NYTM
 ===========
-[Content](http://www.youtube.com/wikitongues)
+[Content](http://www.youtube.com/wikitongues/videos)
 
+[Google Translate](https://translate.google.com/)

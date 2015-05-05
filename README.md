@@ -1,7 +1,9 @@
-ember-homepage
+Ember-homepage
 ==============
 
-##Requires Grunt CLI
+###Requires Grunt CLI
+
+####Make sure to run 'npm install' and 'bower install'
 
 Start project with:
 

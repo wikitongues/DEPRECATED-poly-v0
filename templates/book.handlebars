@@ -1,11 +1,11 @@
-x<section class="page poly">
+<section class="page poly">
   {{#link-to "books" tagName="a" class="back"}}Back{{/link-to}}
   <section class="app">
     <nav class="top-navigation">
       <a title="Save"></a>
       <p>{{phraseCount}}</p>
       <div class="rightSubNav">
-        <a title="More"></a>
+        <a title="Location"></a>
         <a title="Settings"></a>
         <div class="moreNavItems">
           <a title="Share"></a>
@@ -31,16 +31,16 @@ x<section class="page poly">
                 <p>{{sourcePhrase}}</p>
                 <div class="options-wrapper">
                   <div class="options">
-                    <a href="">
+                    <a>
                       <img src="img/poly/sound.svg" alt="">
                     </a>
-                    {{!-- <a href="">
-                      <img src="img/poly/gender-f.svg" alt="">
+                    <a>
+                      <img src="img/poly/video.svg" alt="">
                     </a>
-                    <a href="">
+                    {{!-- <a>
                       <img src="img/poly/gender-m.svg" alt="">
                     </a>
-                    <a href="">
+                    <a>
                       <img src="img/poly/new.svg" alt="">
                     </a> --}}
                   </div>
@@ -50,16 +50,16 @@ x<section class="page poly">
                 <p>{{targetPhrase}}</p>
                 <div class="options-wrapper">
                   <div class="options">
-                    <a href="">
+                    <a>
+                      <img src="img/poly/video.svg" alt="">
+                    </a>
+                    <a>
                       <img src="img/poly/sound.svg" alt="">
                     </a>
-                    {{!-- <a href="">
-                      <img src="img/poly/gender-f.svg" alt="">
-                    </a>
-                    <a href="">
+                    {{!-- <a>
                       <img src="img/poly/gender-m.svg" alt="">
                     </a>
-                    <a href="">
+                    <a>
                       <img src="img/poly/new.svg" alt="">
                     </a> --}}
                   </div>
@@ -72,7 +72,7 @@ x<section class="page poly">
         {{/each}}
       </ul>
       <button {{action "addPhrase"}}><a>+</a></button>
-      
+
     </section>
   </section>
 </section>

@@ -566,5 +566,185 @@ App.Phrase.FIXTURES = [
     targetPhrase:"I am wearing jeans.",
     targetAudio:"",
     targetVideo:""
+  },{
+    id:10001063,
+    book:10003,
+    sourcePhrase:"Hello",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Namastē",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001064,
+    book:10003,
+    sourcePhrase:"Goodbye.",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Namaskār",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001065,
+    book:10003,
+    sourcePhrase:"What is your name?",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"āpkā nām kyā hai?",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001066,
+    book:10003,
+    sourcePhrase:"My name is …",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Mērā nām … hai.",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001067,
+    book:10004,
+    sourcePhrase:"Hello",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Hola",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001068,
+    book:10004,
+    sourcePhrase:"Goodbye.",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Adéu",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001069,
+    book:10004,
+    sourcePhrase:"What is your name?",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Com et dius?",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001070,
+    book:10004,
+    sourcePhrase:"My name is …",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Em dic …",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001071,
+    book:10005,
+    sourcePhrase:"Hello",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Mba’éichapa.",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001072,
+    book:10005,
+    sourcePhrase:"Goodbye.",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Jajohecha peve.",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001073,
+    book:10005,
+    sourcePhrase:"What is your name?",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Mba’éichapa nderéra?",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001074,
+    book:10005,
+    sourcePhrase:"My name is …",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Cheréra …",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001075,
+    book:10006,
+    sourcePhrase:"Hello",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Mba’éichapa.",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001076,
+    book:10006,
+    sourcePhrase:"Goodbye.",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Jajohecha peve.",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001077,
+    book:10006,
+    sourcePhrase:"What is your name?",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Mba’éichapa nderéra?",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001078,
+    book:10006,
+    sourcePhrase:"My name is …",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Cheréra …",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001079,
+    book:10007,
+    sourcePhrase:"Hello",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Mba’éichapa.",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001080,
+    book:10007,
+    sourcePhrase:"Goodbye.",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Jajohecha peve.",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001081,
+    book:10007,
+    sourcePhrase:"What is your name?",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Mba’éichapa nderéra?",
+    targetAudio:"",
+    targetVideo:""
+  },{
+    id:10001082,
+    book:10007,
+    sourcePhrase:"My name is …",
+    sourceAudio:"",
+    sourceVideo:"",
+    targetPhrase:"Cheréra …",
+    targetAudio:"",
+    targetVideo:""
   }
 ]

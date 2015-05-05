@@ -41,7 +41,7 @@
       position initial
       top initial
       background #fff
-      border-bottom 2px solid lighten($blue, 90%)
+      border-bottom 2px solid #e0e0e0
       z-index 5
 
       &.top-navigation
@@ -86,7 +86,7 @@
           background-position-y -2px
 
           &:hover
-            background-position-y -42px
+            background-position-y -43px
             transition background-position-y 0s linear
 
           &[title~="Share"]
@@ -95,21 +95,21 @@
           &[title~="Embed"]
             background-position-x -80px
 
+          &[title~="More"]
+            background-position-x -160px
+
           &[title~="Location"]
             background-position-x -120px
 
           &[title~="Settings"]
             background-position-x -160px
 
-          &[title~="More"]
-            background-position-x -200px
-
             &:hover
               transform rotate(-.25turn)
               transition transform $transition-time ease-in-out
 
       &.language-navigation
-        border-bottom 3px solid lighten($blue, 90%)
+        border-bottom 3px solid #e0e0e0
 
         &.sticky
           h1
@@ -246,7 +246,7 @@
 
               &:hover
                 .options-wrapper
-                    width 80px
+                    width 120px
 
               p
                 width initial
@@ -273,7 +273,7 @@
                     background darken(#C4CDD1, 10%)
 
                 .options-wrapper
-                  margin-left -23px
+                  margin-left -20px
                   float left
 
                   .options
@@ -305,7 +305,7 @@
                     background darken(#bbdbfd, 10%)
 
                 .options-wrapper
-                  margin-right -23px
+                  margin-right -20px
                   float right
 
                   .options
@@ -343,7 +343,7 @@
                 height 47px
 
                 .options
-                  width 80px
+                  width 124px
                   display inline-block
                   background #fff
                   border darken(#f9f9f9, 7%)
@@ -352,10 +352,12 @@
                   z-index 0
 
                   a
+                    cursor pointer
                     display inline-block
                     float left
                     border-radius 100%
-                    padding 6px
+                    padding 5px
+                    border 1px solid transparent
 
                     img
                       float left
@@ -363,7 +365,8 @@
                       width 30px
 
                     &:hover
-                      background #fff
+                      background #ededed
+                      // border 1px solid $hover
 
       button
         background none
@@ -375,6 +378,7 @@
         padding 0
 
         a
+          cursor pointer
           height 40px
           width 40px
           padding 4px 13px 8px

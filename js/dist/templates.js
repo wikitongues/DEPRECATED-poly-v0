@@ -173,10 +173,10 @@ function program3(depth0,data) {
   data.buffer.push("\n          <li class=\"entry\">\n            <ul>\n              <li class=\"source\">\n                <p>");
   stack1 = helpers._triageMustache.call(depth0, "sourcePhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n                <div class=\"options-wrapper\">\n                  <div class=\"options\">\n                    <a href=\"\">\n                      <img src=\"img/poly/sound.svg\" alt=\"\">\n                    </a>\n                    \n                  </div>\n                </div>\n              </li>\n              <li class=\"target\">\n                <p>");
+  data.buffer.push("</p>\n                <div class=\"options-wrapper\">\n                  <div class=\"options\">\n                    <a>\n                      <img src=\"img/poly/sound.svg\" alt=\"\">\n                    </a>\n                    <a>\n                      <img src=\"img/poly/video.svg\" alt=\"\">\n                    </a>\n                    \n                  </div>\n                </div>\n              </li>\n              <li class=\"target\">\n                <p>");
   stack1 = helpers._triageMustache.call(depth0, "targetPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n                <div class=\"options-wrapper\">\n                  <div class=\"options\">\n                    <a href=\"\">\n                      <img src=\"img/poly/sound.svg\" alt=\"\">\n                    </a>\n                    \n                  </div>\n                </div>\n              </li>\n            </ul>\n          </li>\n          ");
+  data.buffer.push("</p>\n                <div class=\"options-wrapper\">\n                  <div class=\"options\">\n                    <a>\n                      <img src=\"img/poly/video.svg\" alt=\"\">\n                    </a>\n                    <a>\n                      <img src=\"img/poly/sound.svg\" alt=\"\">\n                    </a>\n                    \n                  </div>\n                </div>\n              </li>\n            </ul>\n          </li>\n          ");
   return buffer;
   }
 
@@ -186,7 +186,7 @@ function program5(depth0,data) {
   data.buffer.push("\n          <p class=\"empty\">Shoot! There is nothing here!</p>\n        ");
   }
 
-  data.buffer.push("x<section class=\"page poly\">\n  ");
+  data.buffer.push("<section class=\"page poly\">\n  ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("a"),
     'class': ("back")
@@ -195,7 +195,7 @@ function program5(depth0,data) {
   data.buffer.push("\n  <section class=\"app\">\n    <nav class=\"top-navigation\">\n      <a title=\"Save\"></a>\n      <p>");
   stack1 = helpers._triageMustache.call(depth0, "phraseCount", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n      <div class=\"rightSubNav\">\n        <a title=\"More\"></a>\n        <a title=\"Settings\"></a>\n        <div class=\"moreNavItems\">\n          <a title=\"Share\"></a>\n          <a title=\"Embed\"></a>\n          <a title=\"Location\"></a>\n        </div>\n      </div>\n    </nav>\n    <section class=\"banner\">\n      <img ");
+  data.buffer.push("</p>\n      <div class=\"rightSubNav\">\n        <a title=\"Location\"></a>\n        <a title=\"Settings\"></a>\n        <div class=\"moreNavItems\">\n          <a title=\"Share\"></a>\n          <a title=\"Embed\"></a>\n          <a title=\"Location\"></a>\n        </div>\n      </div>\n    </nav>\n    <section class=\"banner\">\n      <img ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'src': ("bannerUrl"),
     'alt': ("User")
@@ -211,7 +211,7 @@ function program5(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n      </ul>\n      <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "addPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push("><a>+</a></button>\n      \n    </section>\n  </section>\n</section>\n\n");
+  data.buffer.push("><a>+</a></button>\n\n    </section>\n  </section>\n</section>\n\n");
   return buffer;
   
 });

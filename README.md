@@ -21,4 +21,5 @@ To Do's
 * create a back end
   * implement saving input
   * implement creating new books
-  * implement saving audio
+  * implement saving audio/video
+  * implement displaying audio/video

@@ -3,7 +3,7 @@ Ember-homepage
 
 ###Requires Grunt CLI
 
-####Make sure to run 'npm install' and 'bower install'
+####Make sure to run `npm install` and `bower install`
 
 Start project with:
 

@@ -13,5 +13,5 @@ Go to `http://localhost:3000`
 
 NYTM
 ===========
-[Content](www.youtube.com/wikitongues)
+[Content](http://www.youtube.com/wikitongues)
 

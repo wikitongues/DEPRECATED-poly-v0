@@ -1,142 +1,10 @@
 .bookPage
   background #fafafa
   width 100% !important
-  // max-width 100% !important
-  // padding-top 0
-  // padding-bottom 0
   float left
 
   a.back
     float left
-
-  // .document
-  //   border-radius $radius
-  //   background #f4f4f4
-  //   border 1px solid #e8e8e8
-  //   margin 20px  auto
-  //   width 350px
-  //   max-height 900px
-  //   overflow-x hidden
-  //   overflow-y scroll
-  //   box-shadow 0 5px 4px 1px rgba(0,0,0,.1)
-
-  //   section.banner
-  //     border none
-  //     height 220px
-  //     width 100%
-
-  //     &:hover
-  //       height 230px
-  //       transition height ease-in-out 2*$transition-time
-
-  //       img
-  //         margin-top -25%
-  //         transition margin-top ease-in-out 2*$transition-time
-
-  //     img
-  //       margin-top -23%
-
-  //   nav
-  //     width 100%
-  //     position initial
-  //     top initial
-  //     background #fff
-  //     border-bottom 1px solid #EDEDED
-  //     z-index 5
-
-  //     &.top-navigation
-  //       height 50px
-
-  //       h2
-  //         float left
-  //         display block
-  //         width auto
-  //         margin 0
-  //         padding 0.5em 0
-  //         font-size 1.4em
-  //         white-space nowrap
-  //         overflow hidden
-  //         width 240px
-  //         text-overflow ellipsis
-  //         text-transform capitalize
-
-  //       &:hover
-  //         margin-top 0
-
-  //       .rightSubNav
-  //         float right
-
-  //         .moreNavItems
-  //           height 40px
-  //           width 120px
-  //           position absolute
-  //           margin-left -120px
-  //           display none
-
-  //           a
-  //             position static
-  //             float left
-
-  //       a
-  //         display inline-block
-  //         height 40px
-  //         width 40px
-  //         margin .3em 5px 0 5px
-  //         background-size cover
-  //         cursor pointer
-  //         border-radius 20px
-
-  //         &:hover
-  //             background-color #f8f8f8
-
-  //         &.favorite
-  //           background-position-y -40px
-
-  //         &.star
-  //           background-image url('../img/poly/favorite.svg')
-  //           float left
-
-  //         &.more
-  //           background-image url('../img/poly/more.svg')
-  //           float right
-
-  //         &.settings
-  //           margin-top .6em
-  //           background-image url('../img/poly/settings.svg')
-  //           float right
-
-  //           &:hover
-  //             transform rotate(-.166turn)
-  //             transition transform $transition-time ease-in-out
-
-  //     &.language-navigation
-  //       min-height 43px
-  //       border-top 1px solid #EDEDED
-  //       border-bottom 3px solid darken(#F4F4F4, 4%)
-
-  //       span.direction
-  //         background-image url('../img/poly/direction.svg')
-  //         width 6%
-  //         float left
-  //         height 22px
-  //         margin-top 0.8em
-
-  //       .language
-  //         text-align center
-  //         cursor pointer
-  //         width 47%
-  //         float left
-  //         margin 0
-  //         font-size 1.4em
-  //         padding .4em .8em
-  //         text-transform capitalize
-  //         overflow hidden
-  //         white-space nowrap
-  //         text-overflow ellipsis
-
-
-
-
 
 .book
   float left
@@ -151,6 +19,7 @@
   box-shadow 0 2px 0 0 #C3C5C7, 0 2px 3px 0 #ddd
 
   &.open
+    font-size .7em
     float none
     display block
     margin 20px auto
@@ -158,119 +27,95 @@
     height initial
     overflow-x hidden
     overflow-y scroll
-    box-shadow 0 5px 4px 1px rgba(0,0,0,.1)
 
     &:hover
       margin-top 20px
       box-shadow 0 2px 0 0 #C3C5C7, 0 2px 3px 0 #ddd
 
-    section.top-navigation
-      h2
-        font-size .9em
+    section
+      &.top-navigation
+        h2
+          margin-top .6em
+          cursor initial
+
+      &.banner
+        border none
+        height 220px
+        width 100%
+
+        &:hover
+          height 230px
+          transition height ease-in-out 2*$transition-time
+
+          img
+            margin-top -18%
+            transition margin-top ease-in-out 2*$transition-time
 
   &:hover
     margin-top 18px
     box-shadow 0 4px 0 0 #C3C5C7, 0 2px 3px 1px #eaeaea
 
-  section.top-navigation
-    background white
-    height 50px
-    border-bottom 1px solid #EDEDED
+  *
+    font-family "Open sans", "helvetica", sans-serif
 
-    a
-      display inline-block
-      height 40px
-      width 40px
-      margin .3em 5px 0 5px
-      background-size cover
-      cursor pointer
-      border-radius 20px
-
-      &:hover
-          background-color #f8f8f8
-
-      &.favorite
-        background-position-y -40px
-
-      &.star
-        background-image url('../img/poly/favorite.svg')
-        float left
-
-      &.more
-        background-image url('../img/poly/more.svg')
-        float right
-
-    h2
-      cursor pointer
-      margin .5em 0 0 0
-      font-size 1.2em
-      float left
-      max-width 240px
-      overflow hidden
-      display inline
-      white-space nowrap
-      text-overflow ellipsis
-      height 32px
-      font-family "Open sans", "helvetica", sans-serif
-
-    p.number
-      padding 0.7em 0.8em
-      font-family "Open sans", "helvetica", sans-serif
-      float right
-      display inline-block
-      width initial
-      margin 0
-      font-size 0.8em
-      color #bbb
-      line-height 2.5em
-
-  .banner
-    border none
-    height 250px
-    width 100%
-
-    img
-      margin-top -15%
-
-    .moreInfo
-      display none
-      position relative
-      z-index 10
-      height 100%
-      background rgba(255,255,255,.9)
-
-      p
-        display inline-block
-        margin 0
-
-  nav
-    width 100%
-    position initial
-    top initial
-    background #fff
-
+  section
     &.top-navigation
-      margin-top -33px
-      height 40px
+      background white
+      height 50px
+      border-bottom 1px solid #EDEDED
 
-      &:hover
-        margin-top 0
-
-      a
-        padding 11px
+      a.icon
+        display inline-block
         height 40px
         width 40px
-        text-align center
-        display block
-        float left
-        color $blue
+        margin .3em 5px 0 5px
+        background-size cover
+        cursor pointer
+        border-radius 20px
 
         &:hover
-          background lighten($hover, 40%)
+            background-color #f8f8f8
+
+        &.favorite
+          background-position-y -40px
+
+        &.star
+          background-image url('../img/poly/favorite.svg')
+          float left
+
+        &.more
+          background-image url('../img/poly/more.svg')
+          float right
+
+      .title
+        cursor pointer
+        margin .5em 0 0 0
+        font-size 1.2em
+        float left
+        width 240px
+        overflow hidden
+        display inline
+        white-space nowrap
+        text-overflow ellipsis
+        height 32px
+
+      p.number
+        padding 0.7em 0.8em
+        float right
+        display inline-block
+        width initial
+        margin 0
+        font-size 0.8em
+        color #bbb
+        line-height 2.5em
 
     &.language-navigation
+      background white
+      display inline-block
+      width 100%
       border-top 1px solid #EDEDED
       border-bottom 3px solid darken(#F4F4F4, 4%)
+      float left
 
       span.direction
         background-image url('../img/poly/direction.svg')
@@ -292,14 +137,33 @@
         white-space nowrap
         text-transform capitalize
 
+  .banner
+    border none
+    height 250px
+    width 100%
+
+    img
+      margin-top -15%
+
+  .moreInfo
+    position absolute
+    z-index 10
+    height 250px
+    width 350px
+    background rgba(255,255,255,.9)
+
+    p
+      display inline-block
+      margin 0
+
   .phrases
+    float left
+    font-size 1.4em
     display inline-block
     padding .1em 0 0 0
     width 100%
-    font-family 'Open Sans',helvetica,sans-serif
 
     ul.entries
-      font-family 'Open Sans', sans-serif
       clear both
       width 100%
       padding 0
@@ -459,29 +323,24 @@
                     background #F8F8F8
 
     button
-      background none
       border none
-      width 100%
-      font-size 1em
-      height 2.5em
-      float left
-      padding 0
+      cursor pointer
+      height 50px
+      width 50px
+      padding 5px 13px 8px
+      border-radius 100%
+      margin .4em auto
+      display block
+      color $hover
+      background #fdfdfd
+      box-shadow 0 2px 0 #eee
+      font-weight 700
+      font-size 1.3em
+      text-shadow 0 1px darken($hover, 25%)
 
-      a
-        cursor pointer
-        height 40px
-        width 40px
-        padding 4px 13px 8px
-        border-radius 100%
-        margin 0 auto
-        display block
-        color $hover
+      &:hover
+        box-shadow 0 3px 0 #e9e9e9
         background #fff
-        box-shadow 0 5px 4px 1px rgba(0,0,0,.1)
-
-        &:hover
-          box-shadow 0 5px 4px 1px rgba(0,0,0,.2)
-          color $blue
 
   &.newBook
     border none

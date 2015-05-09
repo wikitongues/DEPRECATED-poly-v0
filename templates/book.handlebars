@@ -2,25 +2,24 @@
 <section class="page">
   {{#link-to "dashboard" tagName="a" class="back"}}Back{{/link-to}}
   <section class="book open">
-    {{!-- {{book-header favorite=favorite title=title sourceName=sourceName targetName=targetName bannerUrl=bannerUrl}} --}}
     <section class="top-navigation">
       {{#if favorite}}
-        <a class="star favorite" title="Favorite"></a>
+        <a class="icon star favorite" title="Favorite"></a>
         {{else}}
-        <a class="star" title="Favorite"></a>
+        <a class="icon star" title="Favorite"></a>
       {{/if}}
       <h2 class="title" {{bind-attr title="title"}}>{{title}}</h2>
-      <a class="more" title="More"></a>
+      <a class="icon more" title="More"></a>
       </div>
     </section>
     <section class="banner">
       <img {{bind-attr src="bannerUrl" alt="User"}} class="fallback">
     </section>
-    <nav class="language-navigation">
+    <section class="language-navigation">
       {{#link-to "" classNames="language source" tagName="h1" title=sourceName}}{{sourceName}}{{/link-to}}
       <span class="direction"></span>
       {{#link-to "" classNames="language target" tagName="h1" title=targetName}}{{targetName}}{{/link-to}}
-    </nav>
+    </section>
     <section class="phrases">
       <ul class="entries">
         {{#each phrases}}

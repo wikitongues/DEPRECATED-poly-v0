@@ -1,42 +1,40 @@
 {{app-navigation}}
 <section class="dashboard">
-  <div class="bookDashboard">
-    <p>People you follow</p>
-    {{#each}}
-      <section class="book">
-        <section class="presentation">
-          {{#if favorite}}
-            <a class="star favorite" title="Favorite"></a>
-            {{else}}
-            <a class="star" title="Favorite"></a>
-          {{/if}}
-          {{#link-to "book" this tagName="h2" title=title}}
-            {{title}}
-          {{/link-to}}
-          {{!-- <h2 {{bind-attr title="title"}}>{{title}}</h2> --}}
-          <a class="more" title="More"></a>
-        </section>
-        <section class="banner">
-          {{#link-to "book" this tagName="a"}}
-            <img {{bind-attr src="bannerUrl"}}/>
-          {{/link-to}}
-          <div class="moreInfo">
-            <p>{{dateCreated}}</p>
-          </div>
-        </section>
-        <nav class="language-navigation">
-          {{#link-to "" classNames="language source" tagName="h1"}}{{sourceName}}{{/link-to}}
-          <span class="direction"></span>
-          {{#link-to "" classNames="language target" tagName="h1"}}{{targetName}}{{/link-to}}
-        </nav>
+  <p class="dashboardSections">People you follow</p>
+  {{#each}}
+    <section class="book">
+      {{!-- {{book-header book=this.book favorite=favorite title=title sourceName=sourceName targetName=targetName bannerUrl=bannerUrl}} --}}
+      <section class="top-navigation">
+        {{#if favorite}}
+          <a class="star favorite" title="Favorite"></a>
+          {{else}}
+          <a class="star" title="Favorite"></a>
+        {{/if}}
+        {{#link-to "book" this tagName="h2" title=title}}
+          {{title}}
+        {{/link-to}}
+        <a class="more" title="More"></a>
       </section>
-    {{/each}}
+      <section class="banner">
+        {{#link-to "book" this tagName="a"}}
+          <img {{bind-attr src="bannerUrl"}}/>
+        {{/link-to}}
+        <div class="moreInfo">
+          <p>{{dateCreated}}</p>
+        </div>
+      </section>
+      <nav class="language-navigation">
+        {{#link-to "" classNames="language source" tagName="h1"}}{{sourceName}}{{/link-to}}
+        <span class="direction"></span>
+        {{#link-to "" classNames="language target" tagName="h1"}}{{targetName}}{{/link-to}}
+      </nav>
+    </section>
+  {{/each}}
 
-    {{#link-to "create_book" classNames="book newBook" tagName="button"}}
-      <div class="wrapper">
-        <img src="img/newBook.svg" alt="">
-        <p>+</p>
-      </div>
-    {{/link-to}}
-  </div>
+  {{#link-to "create_book" classNames="book newBook" tagName="button"}}
+    <div class="wrapper">
+      <img src="img/newBook.svg" alt="">
+      <p>+</p>
+    </div>
+  {{/link-to}}
 </section>

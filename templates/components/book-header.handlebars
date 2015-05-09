@@ -4,15 +4,18 @@
     {{else}}
     <a class="star" title="Favorite"></a>
   {{/if}}
-  <h2 class="title" {{bind-attr title="title"}}>{{title}}</h2>
+  {{#link-to "book" this tagName="h2" title=title}}
+    {{title}}
+  {{/link-to}}
   <a class="more" title="More"></a>
-  </div>
 </nav>
 <section class="banner">
-  <img {{bind-attr src="bannerUrl" alt="User"}} class="fallback">
+  {{#link-to "book" this tagName="a"}}
+    <img {{bind-attr src="bannerUrl"}}/>
+  {{/link-to}}
 </section>
 <nav class="language-navigation">
-  {{#link-to "" classNames="language source" tagName="h1" title=sourceName}}{{sourceName}}{{/link-to}}
+  {{#link-to "" classNames="language source" tagName="h1"}}{{sourceName}}{{/link-to}}
   <span class="direction"></span>
-  {{#link-to "" classNames="language target" tagName="h1" title=targetName}}{{targetName}}{{/link-to}}
+  {{#link-to "" classNames="language target" tagName="h1"}}{{targetName}}{{/link-to}}
 </nav>

@@ -1,24 +1,40 @@
 <section class="books">
-  <div class="appContainer">
+  <div class="bookDashboard">
     <p>People you follow</p>
     {{#each}}
-      <section class="app">
+      <section class="book">
         <section class="presentation">
+          {{#if favorite}}
+            <a class="star favorite" title="Favorite"></a>
+            {{else}}
+            <a class="star" title="Favorite"></a>
+          {{/if}}
           <h2 {{bind-attr title="title"}}>{{title}}</h2>
-          <p class="number">{{phrasesCount}}</p>
+          {{!-- <p class="number">{{phraseCount}}</p> --}}
+          <a class="more" title="More"></a>
         </section>
         <section class="banner">
           {{#link-to "book" this tagName="a"}}
             <img {{bind-attr src="bannerUrl"}}/>
           {{/link-to}}
+          <div class="moreInfo">
+            <p>{{dateCreated}}</p>
+          </div>
         </section>
 
         <nav class="language-navigation">
           <h1 class="source"><a href="#">{{sourceName}}</a></h1>
-          <a href="#" class="direction">></a>
+          <span class="direction"></span>
           <h1 class="target"><a href="#">{{targetName}}</a></h1>
         </nav>
       </section>
     {{/each}}
+
+    <button class="book newBook">
+      <div class="wrapper">
+        <img src="img/newBook.svg" alt="">
+        <p>+</p>
+      </div>
+    </button>
   </div>
 </section>

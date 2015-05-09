@@ -1,4 +1,4 @@
-.page.poly
+.page.book
   background #fafafa
   width 100% !important
   max-width 100% !important
@@ -9,13 +9,13 @@
   a.back
     float left
 
-  .app
+  .document
     border-radius $radius
     background #f4f4f4
     border 1px solid #e8e8e8
     margin 20px  auto
     width 350px
-    height 600px
+    max-height 900px
     overflow-x hidden
     overflow-y scroll
     box-shadow 0 5px 4px 1px rgba(0,0,0,.1)
@@ -41,18 +41,20 @@
       position initial
       top initial
       background #fff
-      border-bottom 2px solid #e0e0e0
+      border-bottom 1px solid #EDEDED
       z-index 5
 
       &.top-navigation
-        height 40px
+        height 50px
 
-        p
+        h2
           float left
           display block
           width auto
           margin 0
-          padding 0.5em 1em
+          padding 0.5em 0
+          font-size 1.4em
+          text-transform capitalize
 
         &:hover
           margin-top 0
@@ -72,76 +74,54 @@
               float left
 
         a
-          cursor pointer
-          padding 11px
+          display inline-block
           height 40px
           width 40px
-          text-align center
-          display block
-          float left
-          color $blue
-          background-image url("../img/poly-icons.svg") !important
-          background-size 240px
-          transition background-position-y
-          background-position-y -2px
+          margin .3em 5px 0 5px
+          background-size cover
+          cursor pointer
+          border-radius 20px
 
           &:hover
-            background-position-y -43px
-            transition background-position-y 0s linear
+              background-color #f8f8f8
 
-          &[title~="Share"]
-            background-position-x -40px
+          &.favorite
+            background-position-y -40px
 
-          &[title~="Embed"]
-            background-position-x -80px
+          &.star
+            background-image url('../img/poly/favorite.svg')
+            float left
 
-          &[title~="More"]
-            background-position-x -160px
+          &.more
+            background-image url('../img/poly/more.svg')
+            float right
 
-          &[title~="Location"]
-            background-position-x -120px
-
-          &[title~="Settings"]
-            background-position-x -160px
+          &.settings
+            margin-top .6em
+            background-image url('../img/poly/settings.svg')
+            float right
 
             &:hover
-              transform rotate(-.25turn)
+              transform rotate(-.166turn)
               transition transform $transition-time ease-in-out
 
       &.language-navigation
-        border-bottom 3px solid #e0e0e0
+          border-top 1px solid #EDEDED
+          border-bottom 3px solid darken(#F4F4F4, 4%)
 
-        &.sticky
-          h1
-            font-size 0.8em
-
-          a.direction
-            font-size 0.7em
-            margin-top 3px
-            padding 4px
-            height 18px
-            width 18px
-
-        a.direction
-          color $hover
+        span.direction
+          background-image url('../img/poly/direction.svg')
           width 6%
           float left
-          font-size 1.8em
-          font-weight bold
-          text-align center
           height 22px
-          padding 0
-          line-height 1.1em
-          border-radius 100%
-          font-size 1.4em
-          margin-top 0.7em
+          margin-top 0.8em
 
         h1
           cursor pointer
           width 47%
           float left
           margin 0
-          font-size 1.6em
+          font-size 1.4em
 
           a
             height 100%
@@ -154,61 +134,6 @@
       padding .1em 0 0 0
       width 100%
       font-family 'Open Sans',helvetica,sans-serif
-
-      // ul
-      //   display inline-block
-      //   width 100%
-
-        // li
-        //   width inherit
-        //   float left
-        //   padding .6em 0
-        //   border 0px solid lighten($blue, 89%)
-
-        //   &:hover
-        //     background lighten($blue, 92%)
-        //     border-top 3px solid lighten($blue, 89%)
-        //     border-bottom 3px solid lighten($blue, 89%)
-
-        //   p
-        //     clear both
-        //     width 100%
-        //     margin 0
-
-        //     &.phrase-source
-        //       float left
-        //       padding 0 0.5em
-        //       margin-bottom .1em
-
-        //       a
-        //         background #BCDBFE
-        //         border-radius 51px 51px 51px 0
-        //         border 1px solid transparent
-
-        //         &:hover
-        //           background lighten(#BCDBFE, 6%)
-        //           border-color darken(#BCDBFE, 3%)
-
-        //     &.phrase-target
-        //       float right
-        //       text-align right
-        //       padding 0 0.5em
-
-        //       a
-        //         background lighten($secondary-blue, 25%)
-        //         border-radius 51px 51px 0 51px
-        //         border 1px solid transparent
-
-        //         &:hover
-        //           background lighten($secondary-blue, 31%)
-        //           border-color lighten($secondary-blue, 18%)
-
-        //     a
-        //       padding .5em .8em
-        //       font-size .75em
-
-        //       &:hover
-        //         color $blue !important
 
       ul.entries
         font-family 'Open Sans', sans-serif
@@ -227,12 +152,15 @@
           width 100%
           display inline-block
           padding 1em 0
+          border-top 1px solid transparent
+          border-bottom 1px solid transparent
 
           &:last-of-type
             border-bottom none
 
           &:hover
-            background #f6f6f6
+            background #f5f5f5
+            border-color #f2f2f2
 
           ul
             display inline-block
@@ -255,9 +183,9 @@
                 padding .7em 1em
                 position relative
                 z-index 1
+                height 42px
 
                 &:hover
-                  cursor pointer
                   box-shadow 0 3px 4px 1px #ccc
 
               &.source
@@ -365,8 +293,7 @@
                       width 30px
 
                     &:hover
-                      background #ededed
-                      // border 1px solid $hover
+                      background #F8F8F8
 
       button
         background none

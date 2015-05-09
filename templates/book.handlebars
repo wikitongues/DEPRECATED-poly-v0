@@ -2,16 +2,23 @@
   {{#link-to "books" tagName="a" class="back"}}Back{{/link-to}}
   <section class="document">
     <nav class="top-navigation">
-      <a title="Save"></a>
-      <p>{{phraseCount}}</p>
-      <div class="rightSubNav">
+      {{#if favorite}}
+        <a class="star favorite" title="Favorite"></a>
+        {{else}}
+        <a class="star" title="Favorite"></a>
+      {{/if}}
+      <h2 class="title" {{bind-attr title="title"}}>{{title}}</h2>
+      {{!-- <p class="phraseCount">{{phraseCount}} Phrases</p> --}}
+      <a class="more" title="More"></a>
+      {{!-- <a class="settings" title="Settings"></a> --}}
+      {{!-- <div class="rightSubNav">
         <a title="Location"></a>
         <a title="Settings"></a>
         <div class="moreNavItems">
           <a title="Share"></a>
           <a title="Embed"></a>
           <a title="Location"></a>
-        </div>
+        </div> --}}
       </div>
     </nav>
     <section class="banner">
@@ -19,7 +26,7 @@
     </section>
     <nav class="language-navigation">
       <h1 class="source"><a>{{sourceName}}</a></h1>
-      <a class="direction">></a>
+      <span class="direction"></span>
       <h1 class="target"><a>{{targetName}}</a></h1>
     </nav>
     <section class="phrases">
@@ -29,41 +36,11 @@
             <ul>
               <li class="source">
                 <p>{{sourcePhrase}}</p>
-                <div class="options-wrapper">
-                  <div class="options">
-                    <a>
-                      <img src="img/poly/sound.svg" alt="">
-                    </a>
-                    <a>
-                      <img src="img/poly/video.svg" alt="">
-                    </a>
-                    {{!-- <a>
-                      <img src="img/poly/gender-m.svg" alt="">
-                    </a>
-                    <a>
-                      <img src="img/poly/new.svg" alt="">
-                    </a> --}}
-                  </div>
-                </div>
+                {{phrase-options}}
               </li>
               <li class="target">
                 <p>{{targetPhrase}}</p>
-                <div class="options-wrapper">
-                  <div class="options">
-                    <a>
-                      <img src="img/poly/video.svg" alt="">
-                    </a>
-                    <a>
-                      <img src="img/poly/sound.svg" alt="">
-                    </a>
-                    {{!-- <a>
-                      <img src="img/poly/gender-m.svg" alt="">
-                    </a>
-                    <a>
-                      <img src="img/poly/new.svg" alt="">
-                    </a> --}}
-                  </div>
-                </div>
+                {{phrase-options}}
               </li>
             </ul>
           </li>

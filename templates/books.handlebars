@@ -5,13 +5,13 @@
       <section class="book">
         <section class="presentation">
           {{#if favorite}}
-            <a class="star favorite"></a>
+            <a class="star favorite" title="Favorite"></a>
             {{else}}
-            <a class="star"></a>
+            <a class="star" title="Favorite"></a>
           {{/if}}
           <h2 {{bind-attr title="title"}}>{{title}}</h2>
           {{!-- <p class="number">{{phraseCount}}</p> --}}
-          <a class="more"></a>
+          <a class="more" title="More"></a>
         </section>
         <section class="banner">
           {{#link-to "book" this tagName="a"}}
@@ -24,7 +24,7 @@
 
         <nav class="language-navigation">
           <h1 class="source"><a href="#">{{sourceName}}</a></h1>
-          <a href="#" class="direction">></a>
+          <span class="direction"></span>
           <h1 class="target"><a href="#">{{targetName}}</a></h1>
         </nav>
       </section>

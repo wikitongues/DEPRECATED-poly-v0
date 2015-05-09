@@ -1,0 +1,18 @@
+<nav class="top-navigation">
+  {{#if favorite}}
+    <a class="star favorite" title="Favorite"></a>
+    {{else}}
+    <a class="star" title="Favorite"></a>
+  {{/if}}
+  <h2 class="title" {{bind-attr title="title"}}>{{title}}</h2>
+  <a class="more" title="More"></a>
+  </div>
+</nav>
+<section class="banner">
+  <img {{bind-attr src="bannerUrl" alt="User"}} class="fallback">
+</section>
+<nav class="language-navigation">
+  {{#link-to "" classNames="language source" tagName="h1" title=sourceName}}{{sourceName}}{{/link-to}}
+  <span class="direction"></span>
+  {{#link-to "" classNames="language target" tagName="h1" title=targetName}}{{targetName}}{{/link-to}}
+</nav>

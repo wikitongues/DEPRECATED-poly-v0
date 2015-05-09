@@ -1,3 +1,3 @@
-App.BooksController = Ember.ArrayController.extend({
+App.DashboardController = Ember.ArrayController.extend({
   phrasesCount: Ember.computed.alias('length')
 })

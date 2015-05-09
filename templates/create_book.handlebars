@@ -1,0 +1,48 @@
+{{app-navigation}}
+<section class="page book">
+  {{#link-to "books" tagName="a" class="back"}}Back{{/link-to}}
+  <section class="document createBook">
+    <nav class="top-navigation">
+      {{#if favorite}}
+        <a class="star favorite" title="Favorite"></a>
+        {{else}}
+        <a class="star" title="Favorite"></a>
+      {{/if}}
+      <input type="text" value="Phrasebook Title" tabindex=1 onclick="this.value='';" onblur="this.value=!this.value?'Phrasebook Title':this.value;">
+      {{!-- <h2 class="title" {{bind-attr title="title"}}>{{title}}</h2> --}}
+      <a class="more" title="More"></a>
+      </div>
+    </nav>
+    <section class="banner">
+      <img {{bind-attr src="bannerUrl" alt="User"}} class="fallback">
+    </section>
+    <nav class="language-navigation">
+      <input type="text" class="language" value="Source Language" tabindex=2  onclick="this.value='';" onblur="this.value=!this.value?'Source Language':this.value;">
+      <span class="direction"></span>
+      <input type="text" class="language" value="Target Language" tabindex=3  onclick="this.value='';" onblur="this.value=!this.value?'Target Language':this.value;">
+    </nav>
+    <section class="phrases">
+      <ul class="entries">
+        {{#each phrases}}
+          <li class="entry">
+            <ul>
+              <li class="source">
+                <p>{{sourcePhrase}}</p>
+                {{phrase-options}}
+              </li>
+              <li class="target">
+                <p>{{targetPhrase}}</p>
+                {{phrase-options}}
+              </li>
+            </ul>
+          </li>
+          {{else}}
+          <p class="empty">Shoot! There is nothing here!</p>
+        {{/each}}
+      </ul>
+      <button {{action "addPhrase"}}><a>+</a></button>
+
+    </section>
+  </section>
+</section>
+

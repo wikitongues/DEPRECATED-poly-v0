@@ -1,34 +1,8 @@
-<section class="page book">
-  {{#link-to "books" tagName="a" class="back"}}Back{{/link-to}}
+{{app-navigation}}
+<section class="page bookPage">
+  {{#link-to "dashboard" tagName="a" class="back"}}Back{{/link-to}}
   <section class="document">
-    <nav class="top-navigation">
-      {{#if favorite}}
-        <a class="star favorite" title="Favorite"></a>
-        {{else}}
-        <a class="star" title="Favorite"></a>
-      {{/if}}
-      <h2 class="title" {{bind-attr title="title"}}>{{title}}</h2>
-      {{!-- <p class="phraseCount">{{phraseCount}} Phrases</p> --}}
-      <a class="more" title="More"></a>
-      {{!-- <a class="settings" title="Settings"></a> --}}
-      {{!-- <div class="rightSubNav">
-        <a title="Location"></a>
-        <a title="Settings"></a>
-        <div class="moreNavItems">
-          <a title="Share"></a>
-          <a title="Embed"></a>
-          <a title="Location"></a>
-        </div> --}}
-      </div>
-    </nav>
-    <section class="banner">
-      <img {{bind-attr src="bannerUrl" alt="User"}} class="fallback">
-    </section>
-    <nav class="language-navigation">
-      <h1 class="source"><a>{{sourceName}}</a></h1>
-      <span class="direction"></span>
-      <h1 class="target"><a>{{targetName}}</a></h1>
-    </nav>
+    {{book-header favorite=favorite title=title sourceName=sourceName targetName=targetName bannerUrl=bannerUrl}}
     <section class="phrases">
       <ul class="entries">
         {{#each phrases}}
@@ -49,7 +23,6 @@
         {{/each}}
       </ul>
       <button {{action "addPhrase"}}><a>+</a></button>
-
     </section>
   </section>
 </section>

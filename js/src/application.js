@@ -8,5 +8,6 @@ App.ResetScroll = Ember.Mixin.create({
     console.log("resetting scrolls")
   }
 });
+
 App.ApplicationAdapter = DS.FixtureAdapter.extend({
 })

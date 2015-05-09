@@ -1,0 +1,185 @@
+.dashboard
+  overflow auto
+  background #fafafa
+  width 100% !important
+  max-width 100% !important
+  display inline-block
+  font-family "Open sans", "helvetica", sans-serif
+
+  .bookDashboard
+    margin auto
+    min-height 450px
+    padding 0 50px
+    width 1240px !important
+    max-width 1240px !important
+
+    p
+      margin 1em 1em 0 1em
+      font-family "lora"
+      font-style italic
+      color $blue
+
+.book
+  float left
+  display inline-block
+  border-radius $radius
+  background #f4f4f4
+  border-top 1px solid #f6f6f6
+  margin 20px 15px
+  width 350px
+  height 350px
+  overflow hidden
+  box-shadow 0 2px 0 0 #C3C5C7, 0 2px 3px 0 #ddd
+
+  &:hover
+    margin-top 18px
+    box-shadow 0 4px 0 0 #C3C5C7, 0 2px 3px 1px #eaeaea
+
+  section.presentation
+    background white
+    height 50px
+    border-bottom 1px solid #EDEDED
+
+    a
+      display inline-block
+      height 40px
+      width 40px
+      margin .3em 5px 0 5px
+      background-size cover
+      cursor pointer
+      border-radius 20px
+
+      &:hover
+          background-color #f8f8f8
+
+      &.favorite
+        background-position-y -40px
+
+      &.star
+        background-image url('../img/poly/favorite.svg')
+        float left
+
+      &.more
+        background-image url('../img/poly/more.svg')
+        float right
+
+
+    h2
+      cursor pointer
+      margin .5em 0 0 0
+      font-size 1.2em
+      float left
+      max-width 240px
+      overflow hidden
+      display inline
+      white-space nowrap
+      text-overflow ellipsis
+      height 32px
+
+    p.number
+      padding 0.7em 0.8em
+      font-family "Open sans", "helvetica", sans-serif
+      float right
+      display inline-block
+      width initial
+      margin 0
+      font-size 0.8em
+      color #bbb
+      line-height 2.5em
+
+  .banner
+    border none
+    height 250px
+    width 100%
+
+    img
+      margin-top -15%
+
+    .moreInfo
+      display none
+      position relative
+      z-index 10
+      height 100%
+      background rgba(255,255,255,.9)
+
+      p
+        display inline-block
+        margin 0
+
+  nav
+    width 100%
+    position initial
+    top initial
+    background #fff
+
+    &.top-navigation
+      margin-top -33px
+      height 40px
+
+      &:hover
+        margin-top 0
+
+      a
+        padding 11px
+        height 40px
+        width 40px
+        text-align center
+        display block
+        float left
+        color $blue
+
+        &:hover
+          background lighten($hover, 40%)
+
+    &.language-navigation
+      border-top 1px solid #EDEDED
+      border-bottom 3px solid darken(#F4F4F4, 4%)
+
+      span.direction
+        background-image url('../img/poly/direction.svg')
+        width 6%
+        float left
+        height 22px
+        margin-top 0.8em
+
+      .language
+        text-align center
+        cursor pointer
+        width 47%
+        float left
+        margin 0
+        font-size 1.4em
+        padding .4em .8em
+        overflow hidden
+        text-overflow ellipsis
+        white-space nowrap
+        text-transform capitalize
+
+  &.newBook
+    border none
+    cursor pointer
+
+    .wrapper
+      display inline-block
+      background #fff
+      box-shadow 0 3px 0 #eee
+      height 250px
+      width 250px
+      border-radius 100%
+      margin auto
+
+      img
+        display none
+        height 150px
+        margin-top 40px
+
+      p
+        font-family "Open sans", "helvetica", sans-serif
+        font-style normal !important
+        color $hover
+        font-size 10em
+        font-weight 700
+        width 70px
+        margin .4em auto
+        text-shadow 0 1px darken($hover, 25%)
+        line-height 150px

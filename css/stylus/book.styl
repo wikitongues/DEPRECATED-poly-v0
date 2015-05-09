@@ -1,4 +1,4 @@
-.page.book
+.page.bookPage
   background #fafafa
   width 100% !important
   max-width 100% !important
@@ -54,6 +54,10 @@
           margin 0
           padding 0.5em 0
           font-size 1.4em
+          white-space nowrap
+          overflow hidden
+          width 240px
+          text-overflow ellipsis
           text-transform capitalize
 
         &:hover
@@ -106,8 +110,9 @@
               transition transform $transition-time ease-in-out
 
       &.language-navigation
-          border-top 1px solid #EDEDED
-          border-bottom 3px solid darken(#F4F4F4, 4%)
+        min-height 43px
+        border-top 1px solid #EDEDED
+        border-bottom 3px solid darken(#F4F4F4, 4%)
 
         span.direction
           background-image url('../img/poly/direction.svg')
@@ -116,18 +121,18 @@
           height 22px
           margin-top 0.8em
 
-        h1
+        .language
+          text-align center
           cursor pointer
           width 47%
           float left
           margin 0
           font-size 1.4em
-
-          a
-            height 100%
-            padding .4em .8em
-            display block
-            text-transform capitalize
+          padding .4em .8em
+          text-transform capitalize
+          overflow hidden
+          white-space nowrap
+          text-overflow ellipsis
 
     .phrases
       display inline-block

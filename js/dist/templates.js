@@ -186,13 +186,13 @@ function program5(depth0,data) {
   data.buffer.push("\n          <p class=\"empty\">Shoot! There is nothing here!</p>\n        ");
   }
 
-  data.buffer.push("<section class=\"page poly\">\n  ");
+  data.buffer.push("<section class=\"page book\">\n  ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("a"),
     'class': ("back")
   },hashTypes:{'tagName': "STRING",'class': "STRING"},hashContexts:{'tagName': depth0,'class': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "books", options) : helperMissing.call(depth0, "link-to", "books", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  <section class=\"app\">\n    <nav class=\"top-navigation\">\n      <a title=\"Save\"></a>\n      <p>");
+  data.buffer.push("\n  <section class=\"document\">\n    <nav class=\"top-navigation\">\n      <a title=\"Save\"></a>\n      <p>");
   stack1 = helpers._triageMustache.call(depth0, "phraseCount", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</p>\n      <div class=\"rightSubNav\">\n        <a title=\"Location\"></a>\n        <a title=\"Settings\"></a>\n        <div class=\"moreNavItems\">\n          <a title=\"Share\"></a>\n          <a title=\"Embed\"></a>\n          <a title=\"Location\"></a>\n        </div>\n      </div>\n    </nav>\n    <section class=\"banner\">\n      <img ");
@@ -224,22 +224,25 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = '', stack1, helper, options;
-  data.buffer.push("\n      <section class=\"app\">\n        <section class=\"presentation\">\n          <h2 ");
+  data.buffer.push("\n      <section class=\"book\">\n        <section class=\"presentation\">\n          ");
+  stack1 = helpers['if'].call(depth0, "favorite", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(4, program4, data),fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n          <h2 ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'title': ("title")
   },hashTypes:{'title': "STRING"},hashContexts:{'title': depth0},contexts:[],types:[],data:data})));
   data.buffer.push(">");
   stack1 = helpers._triageMustache.call(depth0, "title", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</h2>\n          <p class=\"number\">");
-  stack1 = helpers._triageMustache.call(depth0, "phrasesCount", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n        </section>\n        <section class=\"banner\">\n          ");
+  data.buffer.push("</h2>\n          \n          <a class=\"more\"></a>\n        </section>\n        <section class=\"banner\">\n          ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("a")
-  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "book", "", options) : helperMissing.call(depth0, "link-to", "book", "", options));
+  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(6, program6, data),contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "book", "", options) : helperMissing.call(depth0, "link-to", "book", "", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n        </section>\n\n        <nav class=\"language-navigation\">\n          <h1 class=\"source\"><a href=\"#\">");
+  data.buffer.push("\n          <div class=\"moreInfo\">\n            <p>");
+  stack1 = helpers._triageMustache.call(depth0, "dateCreated", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</p>\n          </div>\n        </section>\n\n        <nav class=\"language-navigation\">\n          <h1 class=\"source\"><a href=\"#\">");
   stack1 = helpers._triageMustache.call(depth0, "sourceName", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</a></h1>\n          <a href=\"#\" class=\"direction\">></a>\n          <h1 class=\"target\"><a href=\"#\">");
@@ -250,6 +253,18 @@ function program1(depth0,data) {
   }
 function program2(depth0,data) {
   
+  
+  data.buffer.push("\n            <a class=\"star favorite\"></a>\n            ");
+  }
+
+function program4(depth0,data) {
+  
+  
+  data.buffer.push("\n            <a class=\"star\"></a>\n          ");
+  }
+
+function program6(depth0,data) {
+  
   var buffer = '';
   data.buffer.push("\n            <img ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
@@ -259,10 +274,10 @@ function program2(depth0,data) {
   return buffer;
   }
 
-  data.buffer.push("<section class=\"books\">\n  <div class=\"appContainer\">\n    <p>People you follow</p>\n    ");
+  data.buffer.push("<section class=\"books\">\n  <div class=\"bookDashboard\">\n    <p>People you follow</p>\n    ");
   stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n\n    <section class=\"app\">\n      <button class=\"newBook\">\n        <p>New book</p>\n      </button>\n    </section>\n  </div>\n</section>\n");
+  data.buffer.push("\n\n    <button class=\"book newBook\">\n      <div class=\"wrapper\">\n        <img src=\"img/newBook.svg\" alt=\"\">\n        <p>+</p>\n      </div>\n    </button>\n  </div>\n</section>\n");
   return buffer;
   
 });

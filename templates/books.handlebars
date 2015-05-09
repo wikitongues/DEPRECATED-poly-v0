@@ -1,16 +1,25 @@
 <section class="books">
-  <div class="appContainer">
+  <div class="bookDashboard">
     <p>People you follow</p>
     {{#each}}
-      <section class="app">
+      <section class="book">
         <section class="presentation">
+          {{#if favorite}}
+            <a class="star favorite"></a>
+            {{else}}
+            <a class="star"></a>
+          {{/if}}
           <h2 {{bind-attr title="title"}}>{{title}}</h2>
-          <p class="number">{{phrasesCount}}</p>
+          {{!-- <p class="number">{{phraseCount}}</p> --}}
+          <a class="more"></a>
         </section>
         <section class="banner">
           {{#link-to "book" this tagName="a"}}
             <img {{bind-attr src="bannerUrl"}}/>
           {{/link-to}}
+          <div class="moreInfo">
+            <p>{{dateCreated}}</p>
+          </div>
         </section>
 
         <nav class="language-navigation">
@@ -21,10 +30,11 @@
       </section>
     {{/each}}
 
-    <section class="app">
-      <button class="newBook">
-        <p>New book</p>
-      </button>
-    </section>
+    <button class="book newBook">
+      <div class="wrapper">
+        <img src="img/newBook.svg" alt="">
+        <p>+</p>
+      </div>
+    </button>
   </div>
 </section>

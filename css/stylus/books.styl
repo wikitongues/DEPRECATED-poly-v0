@@ -5,7 +5,7 @@
   display inline-block
   font-family "Open sans", "helvetica", sans-serif
 
-  .appContainer
+  .bookDashboard
     margin auto
     min-height 450px
     padding 0 50px
@@ -18,28 +18,56 @@
       font-style italic
       color $blue
 
-    .app
+    .book
       float left
       display inline-block
       border-radius $radius
       background #f4f4f4
-      border 1px solid #e8e8e8
+      border-top 1px solid #f6f6f6
       margin 20px 15px
       width 350px
       height 350px
       overflow hidden
-      box-shadow 0 5px 4px 1px rgba(0,0,0,.1)
+      box-shadow 0 2px 0 0 #C3C5C7, 0 2px 3px 0 #ddd
+
+      &:hover
+        margin-top 18px
+        box-shadow 0 4px 0 0 #C3C5C7, 0 2px 3px 1px #eaeaea
 
       section.presentation
         background white
-        padding 0.6em 0.8em
         height 50px
+        border-bottom 1px solid #EDEDED
+
+        a
+          display inline-block
+          height 32px
+          width 32px
+          margin .5em 5px 0 8px
+          background-size cover
+          cursor pointer
+          border-radius 16px
+
+          &:hover
+              background-color #f8f8f8
+
+          &.favorite
+            background-position-y -31px
+
+          &.star
+            background-image url('../img/poly/favorite.svg')
+            float left
+
+          &.more
+            background-image url('../img/poly/more.svg')
+            float right
+
 
         h2
-          margin 0
+          margin .5em 0 0 0
           font-size 1.2em
           float left
-          max-width 280px
+          max-width 260px
           overflow hidden
           display inline
           white-space nowrap
@@ -47,17 +75,33 @@
           height 32px
 
         p.number
+          padding 0.7em 0.8em
           font-family "Open sans", "helvetica", sans-serif
           float right
           display inline-block
           width initial
           margin 0
           font-size 0.8em
+          color #bbb
+          line-height 2.5em
 
       .banner
         border none
         height 250px
         width 100%
+
+        img
+          margin-top -15%
+
+        .moreInfo
+          position relative
+          z-index 10
+          height 100%
+          background rgba(255,255,255,.9)
+
+          p
+            display inline-block
+            margin 0
 
       nav
         width 100%
@@ -85,6 +129,7 @@
               background lighten($hover, 40%)
 
         &.language-navigation
+          border-top 1px solid #EDEDED
           border-bottom 3px solid darken(#F4F4F4, 4%)
 
           &.sticky
@@ -124,3 +169,35 @@
               padding .4em .8em
               display block
               text-transform capitalize
+
+      &.newBook
+        border none
+        cursor pointer
+
+        .wrapper
+          display inline-block
+          background #fff
+          box-shadow 0 2px 0 #f0f0f0
+          height 250px
+          width 250px
+          border-radius 100%
+          margin auto
+
+          img
+            display none
+            height 150px
+            margin-top 40px
+
+          p
+            font-family "Open sans", "helvetica", sans-serif
+            font-style normal !important
+            // font-size 2em
+            // font-weight 100
+            color $hover
+            // margin-top 5em
+            font-size 10em
+            font-weight 700
+            width 70px
+            margin .4em auto
+            text-shadow 0 1px darken($hover, 25%)
+            line-height 150px

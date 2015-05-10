@@ -1,19 +1,19 @@
-  .document.createBook
-    nav
+.book.createBook
+  section
+    input
+      border none
+      font-family "Open sans", "helvetica", sans-serif
+
+    &.top-navigation
       input
-        border none
-        font-family "Open sans", "helvetica", sans-serif
+        height 100%
+        width 240px
+        font-size 1.2em
+        overflow hidden
+        text-overflow ellipsis
+        white-space nowrap
 
-      &.top-navigation
-        input
-          height 100%
-          width 240px
-          font-size 1.4em
-          overflow hidden
-          text-overflow ellipsis
-          white-space nowrap
-
-      &.language-navigation
-        input
-          &:first-of-type
-            float left
+  nav.language-navigation
+    .language
+      &:first-of-type
+        float left

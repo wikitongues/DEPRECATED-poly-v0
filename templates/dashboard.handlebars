@@ -3,31 +3,30 @@
   <p class="dashboardSections">People you follow</p>
   {{#each}}
     <section class="book">
-      {{!-- {{book-header book=this.book favorite=favorite title=title sourceName=sourceName targetName=targetName bannerUrl=bannerUrl}} --}}
       <section class="top-navigation">
         {{#if favorite}}
-          <a class="star favorite" title="Favorite"></a>
+          <a class="icon star favorite" title="Favorite"></a>
           {{else}}
-          <a class="star" title="Favorite"></a>
+          <a class="icon star" title="Favorite"></a>
         {{/if}}
-        {{#link-to "book" this tagName="h2" title=title}}
+        {{#link-to "book" this tagName="a" classNames="title" title=title}}
           {{title}}
         {{/link-to}}
-        <a class="more" title="More"></a>
+        <a class="icon more" {{action "openMore"}} title="More"></a>
+      </section>
+      <section class="moreInfo">
+        <p>{{dateCreated}}</p>
       </section>
       <section class="banner">
         {{#link-to "book" this tagName="a"}}
           <img {{bind-attr src="bannerUrl"}}/>
         {{/link-to}}
-        <div class="moreInfo">
-          <p>{{dateCreated}}</p>
-        </div>
       </section>
-      <nav class="language-navigation">
+      <section class="language-navigation">
         {{#link-to "" classNames="language source" tagName="h1"}}{{sourceName}}{{/link-to}}
         <span class="direction"></span>
         {{#link-to "" classNames="language target" tagName="h1"}}{{targetName}}{{/link-to}}
-      </nav>
+      </section>
     </section>
   {{/each}}
 

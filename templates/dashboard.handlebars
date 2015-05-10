@@ -5,9 +5,9 @@
     <section class="book">
       <section class="top-navigation">
         {{#if favorite}}
-          <a class="icon star favorite" title="Favorite"></a>
+          <a href="" class="icon star favorite" {{action 'favorite'}} title="Favorite"></a>
           {{else}}
-          <a class="icon star" title="Favorite"></a>
+          <a href="" class="icon star" {{action 'favorite'}} title="Favorite"></a>
         {{/if}}
         {{#link-to "book" this tagName="a" classNames="title" title=title}}
           {{title}}

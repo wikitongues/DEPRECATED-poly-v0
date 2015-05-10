@@ -29,7 +29,7 @@
     overflow-y scroll
 
     &:hover
-      margin-top 20px
+      margin 20px auto
       box-shadow 0 2px 0 0 #C3C5C7, 0 2px 3px 0 #ddd
 
     section
@@ -146,11 +146,16 @@
       margin-top -15%
 
   .moreInfo
+    display none
     position absolute
     z-index 10
-    height 250px
+    height 0
     width 350px
-    background rgba(255,255,255,.9)
+    background rgba(255,255,255,.95)
+
+    &.open
+      display block
+      height 250px
 
     p
       display inline-block

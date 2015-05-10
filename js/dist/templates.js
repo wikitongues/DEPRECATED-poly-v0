@@ -133,7 +133,7 @@ function program13(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n      </ul>\n      <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "addPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push("><a>+</a></button>\n    </section>\n  </section>\n</section>\n\n");
+  data.buffer.push(">+</button>\n    </section>\n  </section>\n</section>\n\n");
   return buffer;
   
 });
@@ -684,14 +684,20 @@ function program1(depth0,data) {
   }
 function program2(depth0,data) {
   
-  
-  data.buffer.push("\n          <a class=\"icon star favorite\" title=\"Favorite\"></a>\n          ");
+  var buffer = '';
+  data.buffer.push("\n          <a href=\"\" class=\"icon star favorite\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "favorite", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(" title=\"Favorite\"></a>\n          ");
+  return buffer;
   }
 
 function program4(depth0,data) {
   
-  
-  data.buffer.push("\n          <a class=\"icon star\" title=\"Favorite\"></a>\n        ");
+  var buffer = '';
+  data.buffer.push("\n          <a href=\"\" class=\"icon star\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "favorite", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(" title=\"Favorite\"></a>\n        ");
+  return buffer;
   }
 
 function program6(depth0,data) {

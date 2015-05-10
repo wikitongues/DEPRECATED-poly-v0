@@ -3,7 +3,6 @@
   <p class="dashboardSections">People you follow</p>
   {{#each}}
     <section class="book">
-      {{!-- {{book-header book=this.book favorite=favorite title=title sourceName=sourceName targetName=targetName bannerUrl=bannerUrl}} --}}
       <section class="top-navigation">
         {{#if favorite}}
           <a class="icon star favorite" title="Favorite"></a>
@@ -13,7 +12,7 @@
         {{#link-to "book" this tagName="a" classNames="title" title=title}}
           {{title}}
         {{/link-to}}
-        <a class="icon more" title="More"></a>
+        <a class="icon more" {{action "openMore"}} title="More"></a>
       </section>
       <section class="moreInfo">
         <p>{{dateCreated}}</p>

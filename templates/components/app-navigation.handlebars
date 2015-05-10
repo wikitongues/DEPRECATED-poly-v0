@@ -1,9 +1,10 @@
 <nav>
   <div class="logo">
-    {{#link-to "index" tagName="li"}}
-      <img src="img/logos/horizontalLockup.svg" alt="Wikitongues">
+    {{#link-to "dashboard" tagName="li"}}
+      <img src="img/logos/iconBlue.svg" alt="Wikitongues">
     {{/link-to}}
   </div>
+  <input type="text" value="Search for a phrasebook, phrase or language" tabindex=3  onclick="this.value='';" onblur="this.value=!this.value?'Search for a phrasebook, phrase or language':this.value;">
   <ul class="top-nav">
     {{#link-to "dashboard" tagName="li"}}Dashboard{{/link-to}}
     {{#link-to "profile" tagName="li"}}Profile{{/link-to}}

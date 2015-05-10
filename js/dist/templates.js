@@ -183,7 +183,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  data.buffer.push("\n      <img src=\"img/logos/horizontalLockup.svg\" alt=\"Wikitongues\">\n    ");
+  data.buffer.push("\n      <img src=\"img/logos/iconBlue.svg\" alt=\"Wikitongues\">\n    ");
   }
 
 function program3(depth0,data) {
@@ -207,9 +207,9 @@ function program7(depth0,data) {
   data.buffer.push("<nav>\n  <div class=\"logo\">\n    ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("li")
-  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "index", options) : helperMissing.call(depth0, "link-to", "index", options));
+  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "dashboard", options) : helperMissing.call(depth0, "link-to", "dashboard", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  </div>\n  <ul class=\"top-nav\">\n    ");
+  data.buffer.push("\n  </div>\n  <input type=\"text\" value=\"Search for a phrasebook, phrase or language\" tabindex=3  onclick=\"this.value='';\" onblur=\"this.value=!this.value?'Search for a phrasebook, phrase or language':this.value;\">\n  <ul class=\"top-nav\">\n    ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("li")
   },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "dashboard", options) : helperMissing.call(depth0, "link-to", "dashboard", options));

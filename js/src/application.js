@@ -1,5 +1,6 @@
 var App = Ember.Application.create({
 });
+
 // Resets scroll
 App.ResetScroll = Ember.Mixin.create({
   activate: function() {

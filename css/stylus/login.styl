@@ -14,7 +14,7 @@
     padding 5em
 
     *
-      font-family 'Open Sans', sans-serif
+      font-family $sans
 
     h2, a
       text-align center
@@ -56,13 +56,6 @@
           color $hover
 
     button
-      display inline-block
       font-size 1.2em
       width 100%
-      background lighten($hover,40%)
-      border none
-      cursor pointer
-      padding 0.7em 0
-
-      &:hover
-        background $hover
+      button()

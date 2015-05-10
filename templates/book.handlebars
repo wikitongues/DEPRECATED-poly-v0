@@ -38,7 +38,30 @@
           {{else}}
           <p class="empty">Shoot! There is nothing here!</p>
         {{/each}}
+        <li class="entry entering">
+          <ul>
+            <li class="source">
+              <p>
+                <span class="progress">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </p>
+            </li>
+            <li class="target">
+              <p>
+                <span class="progress">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </p>
+            </li>
+          </ul>
+        </li>
       </ul>
+      {{new-phrase}}
       <button {{action "addPhrase"}}>+</button>
     </section>
   </section>

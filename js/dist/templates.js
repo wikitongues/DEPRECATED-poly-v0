@@ -131,7 +131,10 @@ function program13(depth0,data) {
   data.buffer.push("\n    </section>\n    <section class=\"phrases\">\n      <ul class=\"entries\">\n        ");
   stack1 = helpers.each.call(depth0, "phrases", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(13, program13, data),fn:self.program(11, program11, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      </ul>\n      <button ");
+  data.buffer.push("\n        <li class=\"entry entering\">\n          <ul>\n            <li class=\"source\">\n              <p>\n                <span class=\"progress\">\n                  <span></span>\n                  <span></span>\n                  <span></span>\n                </span>\n              </p>\n            </li>\n            <li class=\"target\">\n              <p>\n                <span class=\"progress\">\n                  <span></span>\n                  <span></span>\n                  <span></span>\n                </span>\n              </p>\n            </li>\n          </ul>\n        </li>\n      </ul>\n      ");
+  stack1 = helpers._triageMustache.call(depth0, "new-phrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n      <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "addPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
   data.buffer.push(">+</button>\n    </section>\n  </section>\n</section>\n\n");
   return buffer;
@@ -466,6 +469,16 @@ function program9(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n    <li class=\"donate\">\n      <a href=\"https://www.fracturedatlas.org/site/fiscal/profile?id=11735\" target=\"_blank\">Donate</a>\n    </li>\n  </ul>\n</nav>");
   return buffer;
+  
+});
+
+Ember.TEMPLATES["components/new-phrase"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  
+
+
+  data.buffer.push("<div class=\"newPhrase\">\n  <input class=\"input\" type=\"text\" value=\"Source Phrase\" tabindex=1 onclick=\"this.value='';\" onblur=\"this.value=!this.value?'Source Phrase':this.value;\">\n  <a class=\"icon save\" title=\"Save\">Save</a>\n</div>");
   
 });
 

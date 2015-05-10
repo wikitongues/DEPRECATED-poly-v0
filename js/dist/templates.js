@@ -951,17 +951,17 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  data.buffer.push("LogIn");
+  data.buffer.push("Log In");
   }
 
   stack1 = helpers._triageMustache.call(depth0, "landing-navigation", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n<form class=\"login\" action=\"#\" method=\"post\">\n  <h2>Already have an account?</h2>\n  <label>\n    <input type=\"text\" name=\"username\" value=\"Username\" onclick=\"this.value='';\" onblur=\"this.value=!this.value?'Username':this.value;\">\n  </label>\n  <label>\n    <input type=\"text\" name=\"password\" value=\"Password\"  onclick=\"this.value='';\" onblur=\"this.value=!this.value?'Password':this.value;\">\n  </label>\n  <section class=\"loginOptions\">\n    <label><input type=\"checkbox\" name=\"RememberMe\" checked>Remember Me</label>\n    <a class>Reset Password</a>\n  </section>\n  ");
+  data.buffer.push("\n<div class=\"loginWrapper\">\n  <form class=\"login\" action=\"#\" method=\"post\">\n    <h2>Already have an account?</h2>\n    <label>\n      <input type=\"text\" name=\"username\" value=\"Username\" onclick=\"this.value='';\" onblur=\"this.value=!this.value?'Username':this.value;\">\n    </label>\n    <label>\n      <input type=\"text\" name=\"password\" value=\"Password\"  onclick=\"this.value='';\" onblur=\"this.value=!this.value?'Password':this.value;\">\n    </label>\n    <section class=\"loginOptions\">\n      <label><input type=\"checkbox\" name=\"RememberMe\" checked>Remember Me</label>\n      <a class>Reset Password</a>\n    </section>\n    ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("button")
-  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "books", options) : helperMissing.call(depth0, "link-to", "books", options));
+  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "dashboard", options) : helperMissing.call(depth0, "link-to", "dashboard", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  <a>Or create a new account</a>\n</form>");
+  data.buffer.push("\n    <a>Or create a new account</a>\n  </form>\n</div>");
   return buffer;
   
 });

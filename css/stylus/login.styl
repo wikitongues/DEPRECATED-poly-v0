@@ -1,58 +1,68 @@
-form.login
-  height 400px
-  width 300px
-  display block
-  margin 4em auto
+.loginWrapper
+  background #fafafa
+  display inline-block
+  width 100%
 
-  *
-    font-family 'Open Sans', sans-serif
-
-  h2, a
-    text-align center
-
-  a
-    cursor pointer
-
-  label, button, a
+  form.login
+    border-radius $radius
+    border 1px solid #f4f4f4
+    background white
+    height 500px
+    width 520px
     display block
-    margin 1em 0
+    margin 4em auto
+    padding 5em
 
-    input
-      margin-top .3em
-      padding .5em .2em
-      font-size 1em
-      border 1px solid #eee
+    *
+      font-family 'Open Sans', sans-serif
 
-      &[type=text]
-        width 100%
-        display block
-
-  .loginOptions
-    label
-      display inline
-      float left
-      width 50%
-
-      input
-        line-height 1em
+    h2, a
+      text-align center
 
     a
-      color #ddd
-      display inline
-      float right
-      width 50%
-      text-align right
+      cursor pointer
+
+    label, button, a
+      display block
+      margin 1em 0
+
+      input
+        margin-top .3em
+        padding .5em .2em
+        font-size 1em
+        border 1px solid #eee
+
+        &[type=text]
+          width 100%
+          display block
+
+    .loginOptions
+      label
+        display inline
+        float left
+        width 50%
+
+        input
+          margin 0 5px 0 0
+
+      a
+        color #ccc
+        display inline
+        float right
+        width 50%
+        text-align right
+
+        &:hover
+          color $hover
+
+    button
+      display inline-block
+      font-size 1.2em
+      width 100%
+      background lighten($hover,40%)
+      border none
+      cursor pointer
+      padding 0.7em 0
 
       &:hover
-        color $hover
-
-  button
-    font-size 1em
-    width 100%
-    background lighten($hover,40%)
-    border none
-    cursor pointer
-    padding .5em 0
-
-    &:hover
-      background $hover
+        background $hover

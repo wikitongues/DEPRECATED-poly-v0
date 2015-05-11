@@ -4,13 +4,23 @@
   <section class="book open">
     <section class="top-navigation">
       {{#if favorite}}
-        <a class="icon star favorite" title="Favorite"></a>
+        <a class="icon star favorite" {{action "favorite"}} title="Favorite"></a>
         {{else}}
-        <a class="icon star" title="Favorite"></a>
+        <a class="icon star" {{action "favorite"}} title="Favorite"></a>
       {{/if}}
       <h2 class="title" {{bind-attr title="title"}}>{{title}}</h2>
-      <a class="icon more" title="More"></a>
+      <a class="icon more" {{action 'moreInfo'}} title="More"></a>
       </div>
+    </section>
+    <section class="moreInfo">
+      <section class="background">
+        <p>Created on: {{dateCreated}}</p>
+        <p>Created by: {{createdBy}}</p>
+        <p>Created at: {{location}}</p>
+        <p>Privacy: {{release}}</p>
+        <p>Views: {{views}}</p>
+        <p>Shares: {{shares}}</p>
+      </section>
     </section>
     <section class="banner">
       <img {{bind-attr src="bannerUrl" alt="User"}} class="fallback">
@@ -61,8 +71,13 @@
           </ul>
         </li>
       </ul>
-      {{new-phrase}}
-      <button {{action "addPhrase"}}>+</button>
+      <div class="newPhrase">
+        <input class="input" type="text" value="Source Phrase" tabindex=1 onclick="this.value='';" onblur="this.value=!this.value?'Source Phrase':this.value;">
+        <a class="icon save" title="Save">Save</a>
+      </div>
+      <div class="addPhrase">
+        <button {{action "addPhrase"}}>+</button>
+      </div>
     </section>
   </section>
 </section>

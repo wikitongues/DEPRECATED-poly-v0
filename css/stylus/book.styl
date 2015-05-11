@@ -35,7 +35,7 @@
     section
       &.top-navigation
         h2
-          margin-top .6em
+          margin 0
           cursor initial
 
       &.banner
@@ -60,6 +60,9 @@
 
   section
     &.top-navigation
+      position absolute
+      z-index 2
+      width inherit
       background white
       height 50px
       border-bottom 1px solid #EDEDED
@@ -76,20 +79,25 @@
         &:hover
             background-color #f8f8f8
 
-        &.favorite
-          background-position-y -40px
-
-        &.star
-          background-image url('../img/poly/favorite.svg')
-          float left
-
         &.more
           background-image url('../img/poly/more.svg')
           float right
 
+          &.close
+            background-image url('../img/poly/close.svg')
+
+        &.favorite
+          // display none
+          background-position-y -40px
+
+        &.star
+          // display none
+          background-image url('../img/poly/favorite.svg')
+          float left
+
       .title
+        line-height 1.6em
         cursor pointer
-        margin .5em 0 0 0
         font-size 1.2em
         float left
         width 240px
@@ -97,7 +105,8 @@
         display inline
         white-space nowrap
         text-overflow ellipsis
-        height 32px
+        height 50px
+        padding .5em 0
 
       p.number
         padding 0.7em 0.8em
@@ -138,6 +147,7 @@
         text-transform capitalize
 
   .banner
+    margin-top 50px
     border none
     height 250px
     width 100%
@@ -146,20 +156,49 @@
       margin-top -15%
 
   .moreInfo
-    display none
     position absolute
-    z-index 10
-    height 0
+    z-index 1
+    height 0px
     width 350px
-    background rgba(255,255,255,.95)
+    overflow hidden
+    margin-top 0
+    transition height 0s linear, margin-top $transition-time ease-in-out
+
+    .background
+      height 0
+      width 0
+      background white
+      opacity .5
+      border-radius 0 0 285px 285px
+      margin-top 0
+      margin-left 175px
+      position absolute
+      z-index -1
+      overflow hidden
+      padding 0
+
+      p
+        padding .2em 1em
+        margin 0
+        margin-left -7em
+        display none
+        width 350px
 
     &.open
-      display block
-      height 250px
+      transition height 0s linear, margin-top $transition-time ease-in-out
+      height 220px
+      margin-top 50px
 
-    p
-      display inline-block
-      margin 0
+      .background
+        height 285px
+        width 570px
+        opacity .95
+        margin-top 0
+        margin-left -110px
+
+        p
+          margin-left 7em
+          display inline-block
 
   .phrases
     float left
@@ -174,12 +213,13 @@
       padding 0
       font-size 0.6em
       background #fcfcfc
-      // margin 0 .5em
+      min-height 230px
 
       p.empty
         text-align center
         color $secondary-blue
-        margin-bottom 180px
+        margin 0
+        font-size 1.4em
 
       li.entry
         width 100%
@@ -216,15 +256,15 @@
               padding .7em 1em
               position relative
               z-index 1
-              height 42px
+              max-width 230px
 
             &.source
               p
+                margin-bottom 4px
                 border-radius 21px 21px 21px 0
                 float left
                 background $source
                 border 1px solid darken($source, 2%)
-                // margin-left .5em
 
                 &:hover
                   background lighten($source, 20%)
@@ -255,8 +295,6 @@
                 float right
                 background $target
                 border 1px solid darken($target, 2%)
-                // margin-right .5em
-
 
                 &:hover
                   background lighten($target, 15%)
@@ -324,6 +362,7 @@
                     background #F8F8F8
 
       li.entry.entering
+        display none
         &:hover
           background transparent
           border-color transparent
@@ -353,7 +392,7 @@
                     transform translateY(0px)
 
                 span
-                  background #999
+                  background #4F6387
                   border-radius 100%
                   margin 0 3px 0 0
                   height 4px
@@ -370,30 +409,46 @@
                     margin 0
                     -webkit-animation loading 1s .2s infinite cubic-bezier(.60,0,.40,1)
 
-    button
-      border none
-      cursor pointer
-      height 50px
-      width 50px
-      padding 5px 13px 8px
-      border-radius 100%
-      margin .4em auto
-      display block
-      color $hover
-      background #fdfdfd
-      box-shadow 0 2px 0 #eee
-      font-weight 700
-      font-size 1.3em
-      text-shadow 0 1px darken($hover, 25%)
+    .addPhrase
+      padding .4em 0
+      width 350px
+      background #f4f4f4
+      float left
+      position relative
+      z-index 2
 
-      &:hover
-        box-shadow 0 3px 0 #e9e9e9
-        background #fff
+      button
+        outline none
+        border none
+        cursor pointer
+        height 50px
+        width 50px
+        padding 5px 13px 8px
+        border-radius 100%
+        margin 0 auto
+        display block
+        color $hover
+        background #fdfdfd
+        box-shadow 0 2px 0 #eee
+        font-weight 700
+        font-size 1.3em
+        text-shadow 0 1px darken($hover, 25%)
+
+        &:hover
+          box-shadow 0 3px 0 #e9e9e9
+          background #fff
 
     .newPhrase
+      float left
       display inline-block
       padding .1em 0
       width 100%
+      position relative
+      z-index 1
+      margin-bottom -55px
+
+      &.open
+        margin-bottom 0
 
       input
         border none
@@ -422,20 +477,13 @@
       a.icon.save
         background white
         text-transform uppercase
-        // background-image url("../img/poly/save.svg")
-        // background-size cover
         color $blue
         font-size 0.7em
-        // outline none
-        // box-shadow none
-        // border-left 1px solid #fafafa
-        // margin 0
         width 50px
         height 50px
         float right
         padding .9em 0
         text-align center
-        // border-radius 0
 
   &.newBook
     border none

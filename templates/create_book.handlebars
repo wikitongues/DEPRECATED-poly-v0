@@ -38,8 +38,36 @@
           {{else}}
           <p class="empty">Shoot! There is nothing here!</p>
         {{/each}}
+        <li class="entry entering">
+          <ul>
+            <li class="source">
+              <p>
+                <span class="progress">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </p>
+            </li>
+            <li class="target">
+              <p>
+                <span class="progress">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </p>
+            </li>
+          </ul>
+        </li>
       </ul>
-      <button {{action "addPhrase"}}>+</button>
+      <div class="newPhrase">
+        <input class="input" type="text" value="Source Phrase" tabindex=1 onclick="this.value='';" onblur="this.value=!this.value?'Source Phrase':this.value;">
+        <a class="icon save" title="Save">Save</a>
+      </div>
+      <div class="addPhrase">
+        <button {{action "addPhrase"}}>+</button>
+      </div>
     </section>
   </section>
 </section>

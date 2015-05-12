@@ -13,13 +13,42 @@
       </div>
     </section>
     <section class="moreInfo">
-      <section class="background">
-        <p>Created on: {{dateCreated}}</p>
-        <p>Created by: {{createdBy}}</p>
-        <p>Created at: {{location}}</p>
-        <p>Privacy: {{release}}</p>
-        <p>Views: {{views}}</p>
-        <p>Shares: {{shares}}</p>
+      <section class="background"></section>
+      <section class="info">
+        <p class="author">Created on {{dateCreated}} by {{createdBy}}</p>
+        <section class="privacy">
+          <p>Privacy</p>
+          {{#if privacy}}
+            <a class="toggled"  {{action "privacy"}}>
+              <span class="toggle"></span>
+            </a>
+            <p class="note">Phrasebook is public</p>
+            {{else}}
+            <a {{action "privacy"}}>
+              <span class="toggle"></span>
+            </a>
+            <p class="note">Phrasebook is private</p>
+          {{/if}}
+        </section>
+        <section class="editability">
+          <p>Collaboration</p>
+          {{#if editing}}
+            <a class="toggled"  {{action "editability"}}>
+              <span class="toggle"></span>
+            </a>
+            <p class="note">Others can edit</p>
+            {{else}}
+            <a {{action "editability"}}>
+              <span class="toggle"></span>
+            </a>
+            <p class="note">Others can not edit</p>
+          {{/if}}
+        </section>
+        <section class="social">
+          <p>{{views}} views</p>
+          <p>{{shares}} shares</p>
+          <p>{{saves}} favorites</p>
+        </section>
       </section>
     </section>
     <section class="banner">

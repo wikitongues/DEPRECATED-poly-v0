@@ -3,6 +3,14 @@ App.BookController = Ember.ObjectController.extend({
     favorite: function() {
       this.toggleProperty('favorite')
     },
+    editability: function() {
+      $(this).toggleClass('toggled'),
+      this.toggleProperty('editing')
+    },
+    privacy: function() {
+      $(this).toggleClass('toggled'),
+      this.toggleProperty('privacy')
+    },
     moreInfo: function() {
       $(".icon.more").toggleClass("close")
       $(".moreInfo").toggleClass("open")

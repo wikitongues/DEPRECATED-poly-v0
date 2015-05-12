@@ -58,13 +58,49 @@ function program5(depth0,data) {
 
 function program7(depth0,data) {
   
+  var buffer = '';
+  data.buffer.push("\n            <a class=\"toggled\"  ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "privacy", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">\n              <span class=\"toggle\"></span>\n            </a>\n            <p class=\"note\">Phrasebook is public</p>\n            ");
+  return buffer;
+  }
+
+function program9(depth0,data) {
+  
+  var buffer = '';
+  data.buffer.push("\n            <a ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "privacy", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">\n              <span class=\"toggle\"></span>\n            </a>\n            <p class=\"note\">Phrasebook is private</p>\n          ");
+  return buffer;
+  }
+
+function program11(depth0,data) {
+  
+  var buffer = '';
+  data.buffer.push("\n            <a class=\"toggled\"  ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "editability", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">\n              <span class=\"toggle\"></span>\n            </a>\n            <p class=\"note\">Others can edit</p>\n            ");
+  return buffer;
+  }
+
+function program13(depth0,data) {
+  
+  var buffer = '';
+  data.buffer.push("\n            <a ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "editability", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">\n              <span class=\"toggle\"></span>\n            </a>\n            <p class=\"note\">Others can not edit</p>\n          ");
+  return buffer;
+  }
+
+function program15(depth0,data) {
+  
   var stack1;
   stack1 = helpers._triageMustache.call(depth0, "sourceName", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   else { data.buffer.push(''); }
   }
 
-function program9(depth0,data) {
+function program17(depth0,data) {
   
   var stack1;
   stack1 = helpers._triageMustache.call(depth0, "targetName", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
@@ -72,7 +108,7 @@ function program9(depth0,data) {
   else { data.buffer.push(''); }
   }
 
-function program11(depth0,data) {
+function program19(depth0,data) {
   
   var buffer = '', stack1;
   data.buffer.push("\n          <li class=\"entry\">\n            <ul>\n              <li class=\"source\">\n                <p>");
@@ -91,7 +127,7 @@ function program11(depth0,data) {
   return buffer;
   }
 
-function program13(depth0,data) {
+function program21(depth0,data) {
   
   
   data.buffer.push("\n          <p class=\"empty\">Shoot! There is nothing here!</p>\n        ");
@@ -117,25 +153,28 @@ function program13(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</h2>\n      <a class=\"icon more\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "moreInfo", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(" title=\"More\"></a>\n      </div>\n    </section>\n    <section class=\"moreInfo\">\n      <section class=\"background\">\n        <p>Created on: ");
+  data.buffer.push(" title=\"More\"></a>\n      </div>\n    </section>\n    <section class=\"moreInfo\">\n      <section class=\"background\"></section>\n      <section class=\"info\">\n        <p class=\"author\">Created on ");
   stack1 = helpers._triageMustache.call(depth0, "dateCreated", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n        <p>Created by: ");
+  data.buffer.push(" by ");
   stack1 = helpers._triageMustache.call(depth0, "createdBy", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n        <p>Created at: ");
-  stack1 = helpers._triageMustache.call(depth0, "location", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  data.buffer.push("</p>\n        <section class=\"privacy\">\n          <p>Privacy</p>\n          ");
+  stack1 = helpers['if'].call(depth0, "privacy", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(9, program9, data),fn:self.program(7, program7, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n        <p>Privacy: ");
-  stack1 = helpers._triageMustache.call(depth0, "release", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  data.buffer.push("\n        </section>\n        <section class=\"editability\">\n          <p>Collaboration</p>\n          ");
+  stack1 = helpers['if'].call(depth0, "editing", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(13, program13, data),fn:self.program(11, program11, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n        <p>Views: ");
+  data.buffer.push("\n        </section>\n        <section class=\"social\">\n          <p>");
   stack1 = helpers._triageMustache.call(depth0, "views", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n        <p>Shares: ");
+  data.buffer.push(" views</p>\n          <p>");
   stack1 = helpers._triageMustache.call(depth0, "shares", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n      </section>\n    </section>\n    <section class=\"banner\">\n      <img ");
+  data.buffer.push(" shares</p>\n          <p>");
+  stack1 = helpers._triageMustache.call(depth0, "saves", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push(" favorites</p>\n        </section>\n      </section>\n    </section>\n    <section class=\"banner\">\n      <img ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'src': ("bannerUrl"),
     'alt': ("User")
@@ -145,17 +184,17 @@ function program13(depth0,data) {
     'classNames': ("language source"),
     'tagName': ("h1"),
     'title': ("sourceName")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING",'title': "ID"},hashContexts:{'classNames': depth0,'tagName': depth0,'title': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "", options) : helperMissing.call(depth0, "link-to", "", options));
+  },hashTypes:{'classNames': "STRING",'tagName': "STRING",'title': "ID"},hashContexts:{'classNames': depth0,'tagName': depth0,'title': depth0},inverse:self.noop,fn:self.program(15, program15, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "", options) : helperMissing.call(depth0, "link-to", "", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n      <span class=\"direction\"></span>\n      ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("language target"),
     'tagName': ("h1"),
     'title': ("targetName")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING",'title': "ID"},hashContexts:{'classNames': depth0,'tagName': depth0,'title': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "", options) : helperMissing.call(depth0, "link-to", "", options));
+  },hashTypes:{'classNames': "STRING",'tagName': "STRING",'title': "ID"},hashContexts:{'classNames': depth0,'tagName': depth0,'title': depth0},inverse:self.noop,fn:self.program(17, program17, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "", options) : helperMissing.call(depth0, "link-to", "", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n    </section>\n    <section class=\"phrases\">\n      <ul class=\"entries\">\n        ");
-  stack1 = helpers.each.call(depth0, "phrases", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(13, program13, data),fn:self.program(11, program11, data),contexts:[depth0],types:["ID"],data:data});
+  stack1 = helpers.each.call(depth0, "phrases", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(21, program21, data),fn:self.program(19, program19, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n        <li class=\"entry entering\">\n          <ul>\n            <li class=\"source\">\n              <p>\n                <span class=\"progress\">\n                  <span></span>\n                  <span></span>\n                  <span></span>\n                </span>\n              </p>\n            </li>\n            <li class=\"target\">\n              <p>\n                <span class=\"progress\">\n                  <span></span>\n                  <span></span>\n                  <span></span>\n                </span>\n              </p>\n            </li>\n          </ul>\n        </li>\n      </ul>\n      <div class=\"newPhrase\">\n        <input class=\"input\" type=\"text\" value=\"Source Phrase\" tabindex=1 onclick=\"this.value='';\" onblur=\"this.value=!this.value?'Source Phrase':this.value;\">\n        <a class=\"icon save\" title=\"Save\">Save</a>\n      </div>\n      <div class=\"addPhrase\">\n        <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "addPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -685,10 +724,25 @@ function program1(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n        <a class=\"icon more\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "openMore", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(" title=\"More\"></a>\n      </section>\n      <section class=\"moreInfo\">\n        <p>");
+  data.buffer.push(" title=\"More\"></a>\n      </section>\n      <section class=\"moreInfo\">\n        <section class=\"background\">\n          <p>Created on: ");
   stack1 = helpers._triageMustache.call(depth0, "dateCreated", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n      </section>\n      <section class=\"banner\">\n        ");
+  data.buffer.push("</p>\n          <p>Created by: ");
+  stack1 = helpers._triageMustache.call(depth0, "createdBy", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</p>\n          <p>Created at: ");
+  stack1 = helpers._triageMustache.call(depth0, "location", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</p>\n          <p>Privacy: ");
+  stack1 = helpers._triageMustache.call(depth0, "release", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</p>\n          <p>Views: ");
+  stack1 = helpers._triageMustache.call(depth0, "views", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</p>\n          <p>Shares: ");
+  stack1 = helpers._triageMustache.call(depth0, "shares", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</p>\n        </section>\n      </section>\n      <section class=\"banner\">\n        ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("a")
   },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(8, program8, data),contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "book", "", options) : helperMissing.call(depth0, "link-to", "book", "", options));

@@ -15,7 +15,14 @@
         <a class="icon more" {{action "openMore"}} title="More"></a>
       </section>
       <section class="moreInfo">
-        <p>{{dateCreated}}</p>
+        <section class="background">
+          <p>Created on: {{dateCreated}}</p>
+          <p>Created by: {{createdBy}}</p>
+          <p>Created at: {{location}}</p>
+          <p>Privacy: {{release}}</p>
+          <p>Views: {{views}}</p>
+          <p>Shares: {{shares}}</p>
+        </section>
       </section>
       <section class="banner">
         {{#link-to "book" this tagName="a"}}

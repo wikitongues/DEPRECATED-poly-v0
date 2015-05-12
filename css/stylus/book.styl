@@ -158,47 +158,111 @@
   .moreInfo
     position absolute
     z-index 1
-    height 0px
+    height 0
     width 350px
     overflow hidden
-    margin-top 0
+    margin-top 25px
     transition height 0s linear, margin-top $transition-time ease-in-out
 
+    *
+      ::selection
+        background none
+
     .background
-      height 0
       width 0
-      background white
+      height 0
+      background #fafafa
       opacity .5
       border-radius 0 0 285px 285px
       margin-top 0
       margin-left 175px
       position absolute
       z-index -1
-      overflow hidden
-      padding 0
+
+    .info
+      font-size 0.9em
+      height 220px
+      width 350px
+      padding 1em
+
+      .author
+        margin-bottom 1em
+
+      section
+        display inline-block
+
+        &.privacy, &.editability
+          width 52%
+          float left
+
+        &.privacy
+          margin-bottom 1em
+
+        &.social
+          float right
+          width 40%
+
+          p
+            width 100%
+
+
+        p, a
+          clear none
 
       p
-        padding .2em 1em
+        padding-bottom .3em
         margin 0
-        margin-left -7em
         display none
-        width 350px
+        width auto
+
+        &.note
+          clear left
+          color #888
+
+      a
+        float right
+        background #f0f0f0
+        height 24px
+        width 60px
+        margin-left 1em
+        border-radius 24px
+        border 1px solid #eaeaea
+        box-shadow 0 1px 0 0 #C3C5C7 inset
+        display block
+        cursor pointer
+
+        span.toggle
+          display block
+          height 16px
+          width 16px
+          background #fff
+          box-shadow 0 1px 0 0 #C3C5C7
+          border 1px solid #f0f0f0
+          border-radius 100%
+          margin 3px
+          transition-time .5*$transition-time
+
+        &.toggled
+          box-shadow 0 2px 0 0 darken(#49D070, 20%) inset
+          background #49D070
+
+          .toggle
+            box-shadow 0 1px 0 0 darken(#49D070, 20%)
+            margin-left 38px
 
     &.open
-      transition height 0s linear, margin-top $transition-time ease-in-out
       height 220px
       margin-top 50px
 
       .background
         height 285px
         width 570px
-        opacity .95
-        margin-top 0
         margin-left -110px
+        margin-top 0
+        opacity 1
 
-        p
-          margin-left 7em
-          display inline-block
+      p
+        display inline-block
 
   .phrases
     float left

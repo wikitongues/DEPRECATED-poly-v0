@@ -4,7 +4,7 @@ App.Book = DS.Model.extend({
   lastEdited: DS.attr("date"),
   createdBy: DS.attr("string"),
   location: DS.attr("string"),
-  release: DS.attr("string"),
+  privacy: DS.attr("boolean"),
   sourceISO: DS.attr("string"),
   sourceName: DS.attr("string"),
   targetISO: DS.attr("string"),

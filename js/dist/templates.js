@@ -186,7 +186,7 @@ function program21(depth0,data) {
     'title': ("sourceName")
   },hashTypes:{'classNames': "STRING",'tagName': "STRING",'title': "ID"},hashContexts:{'classNames': depth0,'tagName': depth0,'title': depth0},inverse:self.noop,fn:self.program(15, program15, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "", options) : helperMissing.call(depth0, "link-to", "", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      <span class=\"direction\"></span>\n      ");
+  data.buffer.push("\n\n      <span class=\"direction\"></span>\n      ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("language target"),
     'tagName': ("h1"),
@@ -196,7 +196,11 @@ function program21(depth0,data) {
   data.buffer.push("\n    </section>\n    <section class=\"phrases\">\n      <ul class=\"entries\">\n        ");
   stack1 = helpers.each.call(depth0, "phrases", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(21, program21, data),fn:self.program(19, program19, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n        <li class=\"entry entering\">\n          <ul>\n            <li class=\"source\">\n              <p>\n                <span class=\"progress\">\n                  <span></span>\n                  <span></span>\n                  <span></span>\n                </span>\n              </p>\n            </li>\n            <li class=\"target\">\n              <p>\n                <span class=\"progress\">\n                  <span></span>\n                  <span></span>\n                  <span></span>\n                </span>\n              </p>\n            </li>\n          </ul>\n        </li>\n      </ul>\n      <div class=\"newPhrase\">\n        <input class=\"input\" type=\"text\" value=\"Source Phrase\" tabindex=1 onclick=\"this.value='';\" onblur=\"this.value=!this.value?'Source Phrase':this.value;\">\n        <a class=\"icon save\" title=\"Save\">Save</a>\n      </div>\n      <div class=\"addPhrase\">\n        <button ");
+  data.buffer.push("\n        <li class=\"entry entering\">\n          <ul>\n            <li class=\"source\">\n              <p>\n                <span class=\"progress\">\n                  <span></span>\n                  <span></span>\n                  <span></span>\n                </span>\n              </p>\n            </li>\n            <li class=\"target\">\n              <p>\n                <span class=\"progress\">\n                  <span></span>\n                  <span></span>\n                  <span></span>\n                </span>\n              </p>\n            </li>\n          </ul>\n        </li>\n      </ul>\n      <div class=\"newPhrase\">\n        <input class=\"input\" type=\"text\" value=\"Source Phrase\" tabindex=1 onclick=\"this.value='';\" onblur=\"this.value=!this.value?'Source Phrase':this.value;\">\n        <a class=\"icon save saveSource\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "saveSource", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(" title=\"Save\">Add</a>\n        <a class=\"icon save saveTarget\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "saveTarget", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(" title=\"Save\">Add</a>\n      </div>\n      <div class=\"addPhrase\">\n        <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "addPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
   data.buffer.push(">+</button>\n      </div>\n    </section>\n  </section>\n</section>\n\n");
   return buffer;

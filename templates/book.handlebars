@@ -57,6 +57,7 @@
     </section>
     <section class="language-navigation">
       {{#link-to "" classNames="language source" tagName="h1" title=sourceName}}{{sourceName}}{{/link-to}}
+
       <span class="direction"></span>
       {{#link-to "" classNames="language target" tagName="h1" title=targetName}}{{targetName}}{{/link-to}}
     </section>
@@ -106,7 +107,8 @@
       </div>
       <div class="newPhrase">
         <input class="input" type="text" value="Source Phrase" tabindex=1 onclick="this.value='';" onblur="this.value=!this.value?'Source Phrase':this.value;">
-        <a class="icon save" title="Save">Save</a>
+        <a class="icon save saveSource" {{action "saveSource"}} title="Save">Add</a>
+        <a class="icon save saveTarget" {{action "saveTarget"}} title="Save">Add</a>
       </div>
     </section>
   </section>

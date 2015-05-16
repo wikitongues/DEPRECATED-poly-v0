@@ -13,6 +13,6 @@ App.Router.map(function() {
   this.resource("legal");
   this.resource("releaseForm");
   this.resource("dashboard");
-  this.resource("book", {path:"/dashboard/:book_id"})
+  this.resource("book", {path:"/dashboard/:book_id"});
   this.route("create_book");
 })

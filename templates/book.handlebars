@@ -102,13 +102,13 @@
           </ul>
         </li>
       </ul>
-      <div class="addPhrase">
-        <button {{action "addPhrase"}}>+</button>
-      </div>
       <div class="newPhrase">
         <input class="input" type="text" value="Source Phrase" tabindex=1 onclick="this.value='';" onblur="this.value=!this.value?'Source Phrase':this.value;">
         <a class="icon save saveSource" {{action "saveSource"}} title="Save">Add</a>
         <a class="icon save saveTarget" {{action "saveTarget"}} title="Save">Add</a>
+      </div>
+      <div class="addPhrase">
+        <button {{action "addPhrase"}}>+</button>
       </div>
     </section>
   </section>

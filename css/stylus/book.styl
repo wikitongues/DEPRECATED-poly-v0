@@ -178,77 +178,79 @@
       margin-left 175px
       position absolute
       z-index -1
+      overflow hidden
 
-    .info
-      font-size 0.9em
-      height 220px
-      width 350px
-      padding 1em
+      .info
+        margin 0 -175px
+        font-size 0.9em
+        height 220px
+        width 350px
+        padding 1em
 
-      .author
-        margin-bottom 1em
-
-      section
-        display inline-block
-
-        &.privacy, &.editability
-          width 52%
-          float left
-
-        &.privacy
+        .author
           margin-bottom 1em
 
-        &.social
+        section
+          display inline-block
+
+          &.privacy, &.editability
+            width 52%
+            float left
+
+          &.privacy
+            margin-bottom 1em
+
+          &.social
+            float right
+            width 40%
+
+            p
+              width 100%
+
+
+          p, a
+            clear none
+
+        p
+          padding-bottom .3em
+          margin 0
+          display none
+          width auto
+
+          &.note
+            clear left
+            color #888
+
+        a
           float right
-          width 40%
-
-          p
-            width 100%
-
-
-        p, a
-          clear none
-
-      p
-        padding-bottom .3em
-        margin 0
-        display none
-        width auto
-
-        &.note
-          clear left
-          color #888
-
-      a
-        float right
-        background #f0f0f0
-        height 24px
-        width 60px
-        margin-left 1em
-        border-radius 24px
-        border 1px solid #eaeaea
-        box-shadow 0 1px 0 0 #C3C5C7 inset
-        display block
-        cursor pointer
-
-        span.toggle
+          background #f0f0f0
+          height 24px
+          width 60px
+          margin-left 1em
+          border-radius 24px
+          border 1px solid #eaeaea
+          box-shadow 0 1px 0 0 #C3C5C7 inset
           display block
-          height 16px
-          width 16px
-          background #fff
-          box-shadow 0 1px 0 0 #C3C5C7
-          border 1px solid #f0f0f0
-          border-radius 100%
-          margin 3px
-          transition-time .5*$transition-time
+          cursor pointer
 
-        &.toggled
-          box-shadow 0 2px 0 0 darken(#49D070, 20%) inset
-          background #49D070
+          span.toggle
+            display block
+            height 16px
+            width 16px
+            background #fff
+            box-shadow 0 1px 0 0 #C3C5C7
+            border 1px solid #f0f0f0
+            border-radius 100%
+            margin 3px
+            transition-time .5*$transition-time
 
-          .toggle
-            box-shadow 0 1px 0 0 darken(#49D070, 20%)
-            margin-left 38px
+          &.toggled
+            box-shadow 0 2px 0 0 darken(#49D070, 20%) inset
+            background #49D070
+
+            .toggle
+              box-shadow 0 1px 0 0 darken(#49D070, 20%)
+              margin-left 38px
 
     &.open
       height 220px
@@ -261,8 +263,11 @@
         margin-top 0
         opacity 1
 
-      p
-        display inline-block
+        .info
+          margin-left 110px
+
+        p
+          display inline-block
 
   .phrases
     float left

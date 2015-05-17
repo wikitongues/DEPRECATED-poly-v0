@@ -2,65 +2,7 @@
 <section class="page">
   {{#link-to "dashboard" tagName="a" class="back"}}Back{{/link-to}}
   <section class="book open">
-    <section class="top-navigation">
-      {{#if favorite}}
-        <a class="icon star favorite" {{action "favorite"}} title="Favorite"></a>
-        {{else}}
-        <a class="icon star" {{action "favorite"}} title="Favorite"></a>
-      {{/if}}
-      <h2 class="title" {{bind-attr title="title"}}>{{title}}</h2>
-      <a class="icon more" {{action 'moreInfo'}} title="More"></a>
-      </div>
-    </section>
-    <section class="moreInfo">
-      <section class="background">
-        <section class="info">
-          <p class="author">Created on {{dateCreated}} by {{createdBy}}</p>
-          <section class="privacy">
-            <p>Privacy</p>
-            {{#if privacy}}
-              <a class="toggled"  {{action "privacy"}}>
-                <span class="toggle"></span>
-              </a>
-              <p class="note">Phrasebook is public</p>
-              {{else}}
-              <a {{action "privacy"}}>
-                <span class="toggle"></span>
-              </a>
-              <p class="note">Phrasebook is private</p>
-            {{/if}}
-          </section>
-          <section class="editability">
-            <p>Collaboration</p>
-            {{#if editing}}
-              <a class="toggled"  {{action "editability"}}>
-                <span class="toggle"></span>
-              </a>
-              <p class="note">Others can edit</p>
-              {{else}}
-              <a {{action "editability"}}>
-                <span class="toggle"></span>
-              </a>
-              <p class="note">Others can not edit</p>
-            {{/if}}
-          </section>
-          <section class="social">
-            <p>{{views}} views</p>
-            <p>{{shares}} shares</p>
-            <p>{{saves}} favorites</p>
-          </section>
-        </section>
-      </section>
-    </section>
-    <section class="banner">
-      <img {{bind-attr src="bannerUrl" alt="User"}} class="fallback">
-    </section>
-    <section class="language-navigation">
-      {{#link-to "" classNames="language source" tagName="h1" title=sourceName}}{{sourceName}}{{/link-to}}
-
-      <span class="direction"></span>
-      {{#link-to "" classNames="language target" tagName="h1" title=targetName}}{{targetName}}{{/link-to}}
-    </section>
+    {{book-head book=this tagName="section" classNames="book-head" action="favorite"}}
     <section class="phrases">
       <ul class="entries">
         {{#each phrases}}

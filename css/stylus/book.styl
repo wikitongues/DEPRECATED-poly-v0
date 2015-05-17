@@ -34,9 +34,8 @@
 
     section
       &.top-navigation
-        h2
-          margin 0
-          cursor initial
+        .title
+          pointer-events none
 
       &.banner
         border none
@@ -50,6 +49,8 @@
           img
             margin-top -18%
             transition margin-top ease-in-out 2*$transition-time
+        a
+          pointer-events none
 
   &:hover
     margin 18px 15px 22px 15px
@@ -62,7 +63,7 @@
     &.top-navigation
       position absolute
       z-index 2
-      width inherit
+      width 350px
       background white
       height 50px
       border-bottom 1px solid #EDEDED
@@ -135,7 +136,6 @@
 
       .language
         text-align center
-        cursor pointer
         width 47%
         float left
         margin 0

@@ -3,37 +3,7 @@
   <p class="dashboardSections">Welcome to Wikitongues Poly!</p>
   {{#each}}
     <section class="book">
-      <section class="top-navigation">
-        {{#if favorite}}
-          <a href="" class="icon star favorite" {{action 'favorite'}} title="Favorite"></a>
-          {{else}}
-          <a href="" class="icon star" {{action 'favorite'}} title="Favorite"></a>
-        {{/if}}
-        {{#link-to "book" this tagName="a" classNames="title" title=title}}
-          {{title}}
-        {{/link-to}}
-        <a class="icon more" {{action "openMore"}} title="More"></a>
-      </section>
-      <section class="moreInfo">
-        <section class="background">
-          <p>Created on: {{dateCreated}}</p>
-          <p>Created by: {{createdBy}}</p>
-          <p>Created at: {{location}}</p>
-          <p>Privacy: {{release}}</p>
-          <p>Views: {{views}}</p>
-          <p>Shares: {{shares}}</p>
-        </section>
-      </section>
-      <section class="banner">
-        {{#link-to "book" this tagName="a"}}
-          <img {{bind-attr src="bannerUrl"}}/>
-        {{/link-to}}
-      </section>
-      <section class="language-navigation">
-        {{#link-to "" classNames="language source" tagName="h1"}}{{sourceName}}{{/link-to}}
-        <span class="direction"></span>
-        {{#link-to "" classNames="language target" tagName="h1"}}{{targetName}}{{/link-to}}
-      </section>
+      {{book-head book=this tagName="section" classNames="book-head"}}
     </section>
   {{/each}}
 

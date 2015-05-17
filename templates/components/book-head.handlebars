@@ -1,0 +1,61 @@
+<section class="top-navigation">
+  {{#if book.favorite}}
+    <a href="" class="icon star favorite" {{action 'favorite'}} title="Favorite"></a>
+    {{else}}
+    <a href="" class="icon star" {{action 'favorite'}} title="Favorite"></a>
+  {{/if}}
+  {{#link-to "book" book tagName="a" classNames="title" title=title}}
+    {{book.title}}
+  {{/link-to}}
+  <a class="icon more" {{action "openMore"}} title="More"></a>
+</section>
+<section class="moreInfo">
+  <section class="background">
+    <section class="info">
+      <p class="author">Created on {{book.dateCreated}} by {{book.createdBy}}</p>
+      <section class="privacy">
+        <p>Privacy</p>
+        {{#if book.privacy}}
+          <a class="toggled"  {{action "privacy"}}>
+            <span class="toggle"></span>
+          </a>
+          <p class="note">Phrasebook is public</p>
+          {{else}}
+          <a {{action "privacy"}}>
+            <span class="toggle"></span>
+          </a>
+          <p class="note">Phrasebook is private</p>
+        {{/if}}
+      </section>
+      <section class="editability">
+        <p>Collaboration</p>
+        {{#if book.editing}}
+          <a class="toggled"  {{action "editability"}}>
+            <span class="toggle"></span>
+          </a>
+          <p class="note">Others can edit</p>
+          {{else}}
+          <a {{action "editability"}}>
+            <span class="toggle"></span>
+          </a>
+          <p class="note">Others can not edit</p>
+        {{/if}}
+      </section>
+      <section class="social">
+        <p>{{book.views}} views</p>
+        <p>{{book.shares}} shares</p>
+        <p>{{book.saves}} favorites</p>
+      </section>
+    </section>
+  </section>
+</section>
+<section class="banner">
+  {{#link-to "book" book tagName="a"}}
+    <img {{bind-attr src="book.bannerUrl"}}/>
+  {{/link-to}}
+</section>
+<section class="language-navigation">
+  <h1 class="language target" {{bind-attr title=book.sourceName}}>{{book.sourceName}}</h1>
+  <span class="direction"></span>
+  <h1 class="language target" {{bind-attr title=book.targetName}}>{{book.targetName}}</h1>
+</section>

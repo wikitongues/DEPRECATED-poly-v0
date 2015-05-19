@@ -86,15 +86,14 @@
           {{else}}
           <p class="empty">Shoot! There is nothing here!</p>
         {{/each}}
-        {{partial "phraseInput"}}
+        {{!-- {{partial "phraseInput"}} --}}
       </ul>
       <div class="addPhrase">
         <button {{action "addPhrase"}}>+</button>
       </div>
       <div class="newPhrase">
-        {{input classNames="input source" value="" valueBinding="sourcePhrase" placeholder="Source Phrase"  autofocus="1"}}
-        {{input classNames="input target" value="" valueBinding="targetPhrase" placeholder="Target Phrase" autofocus="1"}}
-        {{!-- <input class="input" type="text" value="Source Phrase" tabindex=1 onclick="this.value='';" onblur="this.value=!this.value?'Source Phrase':this.value;"> --}}
+        {{input classNames="input source" value="" valueBinding="sourcePhrase" placeholder="Source Phrase"  autofocus=true}}
+        {{input classNames="input target" value="" valueBinding="targetPhrase" placeholder="Target Phrase" autofocus=true}}
         <a class="icon save saveSource" {{action "saveSource"}} title="Save">+</a>
         <a class="icon save saveTarget" {{action "saveTarget"}} title="Save">+</a>
       </div>

@@ -219,9 +219,7 @@ function program24(depth0,data) {
   data.buffer.push("\n    </section>\n\n    <section class=\"phrases\">\n      <ul class=\"entries\">\n        ");
   stack1 = helpers.each.call(depth0, "phrases", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(24, program24, data),fn:self.program(19, program19, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n        ");
-  data.buffer.push(escapeExpression((helper = helpers.partial || (depth0 && depth0.partial),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "phraseInput", options) : helperMissing.call(depth0, "partial", "phraseInput", options))));
-  data.buffer.push("\n      </ul>\n      <div class=\"addPhrase\">\n        <button ");
+  data.buffer.push("\n        \n      </ul>\n      <div class=\"addPhrase\">\n        <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "addPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
   data.buffer.push(">+</button>\n      </div>\n      <div class=\"newPhrase\">\n        ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
@@ -229,17 +227,17 @@ function program24(depth0,data) {
     'value': (""),
     'valueBinding': ("sourcePhrase"),
     'placeholder': ("Source Phrase"),
-    'autofocus': ("1")
-  },hashTypes:{'classNames': "STRING",'value': "STRING",'valueBinding': "STRING",'placeholder': "STRING",'autofocus': "STRING"},hashContexts:{'classNames': depth0,'value': depth0,'valueBinding': depth0,'placeholder': depth0,'autofocus': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+    'autofocus': (true)
+  },hashTypes:{'classNames': "STRING",'value': "STRING",'valueBinding': "STRING",'placeholder': "STRING",'autofocus': "BOOLEAN"},hashContexts:{'classNames': depth0,'value': depth0,'valueBinding': depth0,'placeholder': depth0,'autofocus': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n        ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'classNames': ("input target"),
     'value': (""),
     'valueBinding': ("targetPhrase"),
     'placeholder': ("Target Phrase"),
-    'autofocus': ("1")
-  },hashTypes:{'classNames': "STRING",'value': "STRING",'valueBinding': "STRING",'placeholder': "STRING",'autofocus': "STRING"},hashContexts:{'classNames': depth0,'value': depth0,'valueBinding': depth0,'placeholder': depth0,'autofocus': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n        \n        <a class=\"icon save saveSource\" ");
+    'autofocus': (true)
+  },hashTypes:{'classNames': "STRING",'value': "STRING",'valueBinding': "STRING",'placeholder': "STRING",'autofocus': "BOOLEAN"},hashContexts:{'classNames': depth0,'value': depth0,'valueBinding': depth0,'placeholder': depth0,'autofocus': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n        <a class=\"icon save saveSource\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "saveSource", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
   data.buffer.push(" title=\"Save\">+</a>\n        <a class=\"icon save saveTarget\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "saveTarget", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));

@@ -297,12 +297,9 @@
         width 100%
         display inline-block
         padding 0.7em
-        border-top 1px solid transparent
-        border-bottom 1px solid transparent
-
-        &.new
-          border-bottom 0
-          padding-bottom 0
+        border-top 1px solid
+        border-bottom 1px solid
+        border-color transparent
 
         &:last-of-type
           border-bottom none
@@ -335,6 +332,37 @@
               z-index 1
               font-size 1.2em
               max-width 230px
+
+              .progress
+                display inline-block
+                width 18px
+                padding-top 1em
+
+                @keyframes loading
+                  0%
+                    transform translateY(0px)
+                  50%
+                    transform translateY(-6px)
+                  100%
+                    transform translateY(0px)
+
+                span
+                  background #4F6387
+                  border-radius 100%
+                  margin 0 3px 0 0
+                  height 4px
+                  width 4px
+                  float left
+
+                  &:nth-of-type(1)
+                    -webkit-animation loading 1s 0s infinite cubic-bezier(.60,0,.40,1)
+
+                  &:nth-of-type(2)
+                    -webkit-animation loading 1s .1s infinite cubic-bezier(.60,0,.40,1)
+
+                  &:nth-of-type(3)
+                    margin 0
+                    -webkit-animation loading 1s .2s infinite cubic-bezier(.60,0,.40,1)
 
             &.source
               p
@@ -439,59 +467,29 @@
                   &:hover
                     background #F8F8F8
 
-      li.entry.entering
-        border none
-        padding 0 .7em
-        display none
+      // li.entry.entering
+      //   border none
+      //   padding 0 .7em
+      //   display none
 
-        &:hover
-          background transparent
-          border-color transparent
+      //   &:hover
+      //     background transparent
+      //     border-color transparent
 
-        ul
-          li
-            width 100%
-            &.source
-              padding-top .7em
-              float left
-              margin-bottom 4px
+      //   ul
+      //     li
+      //       width 100%
+      //       &.source
+      //         padding-top .7em
+      //         float left
+      //         margin-bottom 4px
 
-            &.target
-              padding-bottom .7em
-              display none
-              float right
+      //       &.target
+      //         padding-bottom .7em
+      //         display none
+      //         float right
 
-            p
-              .progress
-                display inline-block
-                width 18px
-                padding-top 1em
-
-                @keyframes loading
-                  0%
-                    transform translateY(0px)
-                  50%
-                    transform translateY(-6px)
-                  100%
-                    transform translateY(0px)
-
-                span
-                  background #4F6387
-                  border-radius 100%
-                  margin 0 3px 0 0
-                  height 4px
-                  width 4px
-                  float left
-
-                  &:nth-of-type(1)
-                    -webkit-animation loading 1s 0s infinite cubic-bezier(.60,0,.40,1)
-
-                  &:nth-of-type(2)
-                    -webkit-animation loading 1s .1s infinite cubic-bezier(.60,0,.40,1)
-
-                  &:nth-of-type(3)
-                    margin 0
-                    -webkit-animation loading 1s .2s infinite cubic-bezier(.60,0,.40,1)
+      //       p
 
     .addPhrase
       padding .4em 0

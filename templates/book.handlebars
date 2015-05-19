@@ -69,14 +69,18 @@
         {{#each phrases}}
           <li class="entry">
             <ul>
+              {{#if sourcePhrase}}
               <li class="source">
                 <p>{{sourcePhrase}}</p>
                 {{!-- {{phrase-options}} --}}
               </li>
+              {{/if}}
+              {{#if targetPhrase}}
               <li class="target">
                 <p>{{targetPhrase}}</p>
                 {{!-- {{phrase-options}} --}}
               </li>
+              {{/if}}
             </ul>
           </li>
           {{else}}
@@ -88,8 +92,8 @@
         <button {{action "addPhrase"}}>+</button>
       </div>
       <div class="newPhrase">
-        {{input classNames="input source" value="test" placeholder="Source Phrase" tabIndex=1}}
-        {{input classNames="input target" value="test" placeholder="Target Phrase" tabIndex=2}}
+        {{input classNames="input source" value="" valueBinding="sourcePhrase" placeholder="Source Phrase"  autofocus="1"}}
+        {{input classNames="input target" value="" valueBinding="targetPhrase" placeholder="Target Phrase" autofocus="1"}}
         {{!-- <input class="input" type="text" value="Source Phrase" tabindex=1 onclick="this.value='';" onblur="this.value=!this.value?'Source Phrase':this.value;"> --}}
         <a class="icon save saveSource" {{action "saveSource"}} title="Save">+</a>
         <a class="icon save saveTarget" {{action "saveTarget"}} title="Save">+</a>

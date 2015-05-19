@@ -121,17 +121,36 @@ function program17(depth0,data) {
 function program19(depth0,data) {
   
   var buffer = '', stack1;
-  data.buffer.push("\n          <li class=\"entry\">\n            <ul>\n              <li class=\"source\">\n                <p>");
+  data.buffer.push("\n          <li class=\"entry\">\n            <ul>\n              ");
+  stack1 = helpers['if'].call(depth0, "sourcePhrase", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(20, program20, data),contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n              ");
+  stack1 = helpers['if'].call(depth0, "targetPhrase", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(22, program22, data),contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n            </ul>\n          </li>\n          ");
+  return buffer;
+  }
+function program20(depth0,data) {
+  
+  var buffer = '', stack1;
+  data.buffer.push("\n              <li class=\"source\">\n                <p>");
   stack1 = helpers._triageMustache.call(depth0, "sourcePhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n                \n              </li>\n              <li class=\"target\">\n                <p>");
-  stack1 = helpers._triageMustache.call(depth0, "targetPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n                \n              </li>\n            </ul>\n          </li>\n          ");
+  data.buffer.push("</p>\n                \n              </li>\n              ");
   return buffer;
   }
 
-function program21(depth0,data) {
+function program22(depth0,data) {
+  
+  var buffer = '', stack1;
+  data.buffer.push("\n              <li class=\"target\">\n                <p>");
+  stack1 = helpers._triageMustache.call(depth0, "targetPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</p>\n                \n              </li>\n              ");
+  return buffer;
+  }
+
+function program24(depth0,data) {
   
   
   data.buffer.push("\n          <p class=\"empty\">Shoot! There is nothing here!</p>\n        ");
@@ -198,7 +217,7 @@ function program21(depth0,data) {
   },hashTypes:{'classNames': "STRING",'tagName': "STRING",'title': "ID"},hashContexts:{'classNames': depth0,'tagName': depth0,'title': depth0},inverse:self.noop,fn:self.program(17, program17, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "", options) : helperMissing.call(depth0, "link-to", "", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n    </section>\n\n    <section class=\"phrases\">\n      <ul class=\"entries\">\n        ");
-  stack1 = helpers.each.call(depth0, "phrases", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(21, program21, data),fn:self.program(19, program19, data),contexts:[depth0],types:["ID"],data:data});
+  stack1 = helpers.each.call(depth0, "phrases", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(24, program24, data),fn:self.program(19, program19, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n        ");
   data.buffer.push(escapeExpression((helper = helpers.partial || (depth0 && depth0.partial),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "phraseInput", options) : helperMissing.call(depth0, "partial", "phraseInput", options))));
@@ -207,17 +226,19 @@ function program21(depth0,data) {
   data.buffer.push(">+</button>\n      </div>\n      <div class=\"newPhrase\">\n        ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'classNames': ("input source"),
-    'value': ("test"),
+    'value': (""),
+    'valueBinding': ("sourcePhrase"),
     'placeholder': ("Source Phrase"),
-    'tabIndex': (1)
-  },hashTypes:{'classNames': "STRING",'value': "STRING",'placeholder': "STRING",'tabIndex': "INTEGER"},hashContexts:{'classNames': depth0,'value': depth0,'placeholder': depth0,'tabIndex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+    'autofocus': ("1")
+  },hashTypes:{'classNames': "STRING",'value': "STRING",'valueBinding': "STRING",'placeholder': "STRING",'autofocus': "STRING"},hashContexts:{'classNames': depth0,'value': depth0,'valueBinding': depth0,'placeholder': depth0,'autofocus': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n        ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'classNames': ("input target"),
-    'value': ("test"),
+    'value': (""),
+    'valueBinding': ("targetPhrase"),
     'placeholder': ("Target Phrase"),
-    'tabIndex': (2)
-  },hashTypes:{'classNames': "STRING",'value': "STRING",'placeholder': "STRING",'tabIndex': "INTEGER"},hashContexts:{'classNames': depth0,'value': depth0,'placeholder': depth0,'tabIndex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+    'autofocus': ("1")
+  },hashTypes:{'classNames': "STRING",'value': "STRING",'valueBinding': "STRING",'placeholder': "STRING",'autofocus': "STRING"},hashContexts:{'classNames': depth0,'value': depth0,'valueBinding': depth0,'placeholder': depth0,'autofocus': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n        \n        <a class=\"icon save saveSource\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "saveSource", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
   data.buffer.push(" title=\"Save\">+</a>\n        <a class=\"icon save saveTarget\" ");

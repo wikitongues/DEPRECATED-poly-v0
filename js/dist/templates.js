@@ -11,6 +11,16 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 });
 
+Ember.TEMPLATES["_phraseInput"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  
+
+
+  data.buffer.push("<li class=\"entry entering\">\n  <ul>\n    <li class=\"source\">\n      <p>\n        <span class=\"progress\">\n          <span></span>\n          <span></span>\n          <span></span>\n        </span>\n      </p>\n    </li>\n    <li class=\"target\">\n      <p>\n        <span class=\"progress\">\n          <span></span>\n          <span></span>\n          <span></span>\n        </span>\n      </p>\n    </li>\n  </ul>\n</li>");
+  
+});
+
 Ember.TEMPLATES["application"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
@@ -114,16 +124,10 @@ function program19(depth0,data) {
   data.buffer.push("\n          <li class=\"entry\">\n            <ul>\n              <li class=\"source\">\n                <p>");
   stack1 = helpers._triageMustache.call(depth0, "sourcePhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n                ");
-  stack1 = helpers._triageMustache.call(depth0, "phrase-options", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n              </li>\n              <li class=\"target\">\n                <p>");
+  data.buffer.push("</p>\n                \n              </li>\n              <li class=\"target\">\n                <p>");
   stack1 = helpers._triageMustache.call(depth0, "targetPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n                ");
-  stack1 = helpers._triageMustache.call(depth0, "phrase-options", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n              </li>\n            </ul>\n          </li>\n          ");
+  data.buffer.push("</p>\n                \n              </li>\n            </ul>\n          </li>\n          ");
   return buffer;
   }
 
@@ -153,7 +157,7 @@ function program21(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</h2>\n      <a class=\"icon more\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "moreInfo", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(" title=\"More\"></a>\n      </div>\n    </section>\n    <section class=\"moreInfo\">\n      <section class=\"background\">\n        <section class=\"info\">\n          <p class=\"author\">Created on ");
+  data.buffer.push(" title=\"More\"></a>\n      </div>\n    </section>\n\n    <section class=\"moreInfo\">\n      <section class=\"background\">\n        <section class=\"info\">\n          <p class=\"author\">Created on ");
   stack1 = helpers._triageMustache.call(depth0, "dateCreated", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push(" by ");
@@ -174,35 +178,51 @@ function program21(depth0,data) {
   data.buffer.push(" shares</p>\n            <p>");
   stack1 = helpers._triageMustache.call(depth0, "saves", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push(" favorites</p>\n          </section>\n        </section>\n      </section>\n    </section>\n    <section class=\"banner\">\n      <img ");
+  data.buffer.push(" favorites</p>\n          </section>\n        </section>\n      </section>\n    </section>\n\n    <section class=\"banner\">\n      <img ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'src': ("bannerUrl"),
     'alt': ("User")
   },hashTypes:{'src': "STRING",'alt': "STRING"},hashContexts:{'src': depth0,'alt': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" class=\"fallback\">\n    </section>\n    <section class=\"language-navigation\">\n      ");
+  data.buffer.push(" class=\"fallback\">\n    </section>\n\n    <section class=\"language-navigation\">\n      ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("language source"),
     'tagName': ("h1"),
     'title': ("sourceName")
   },hashTypes:{'classNames': "STRING",'tagName': "STRING",'title': "ID"},hashContexts:{'classNames': depth0,'tagName': depth0,'title': depth0},inverse:self.noop,fn:self.program(15, program15, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "", options) : helperMissing.call(depth0, "link-to", "", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n\n      <span class=\"direction\"></span>\n      ");
+  data.buffer.push("\n      <span class=\"direction\"></span>\n      ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("language target"),
     'tagName': ("h1"),
     'title': ("targetName")
   },hashTypes:{'classNames': "STRING",'tagName': "STRING",'title': "ID"},hashContexts:{'classNames': depth0,'tagName': depth0,'title': depth0},inverse:self.noop,fn:self.program(17, program17, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "", options) : helperMissing.call(depth0, "link-to", "", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    </section>\n    <section class=\"phrases\">\n      <ul class=\"entries\">\n        ");
+  data.buffer.push("\n    </section>\n\n    <section class=\"phrases\">\n      <ul class=\"entries\">\n        ");
   stack1 = helpers.each.call(depth0, "phrases", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(21, program21, data),fn:self.program(19, program19, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n        <li class=\"entry entering\">\n          <ul>\n            <li class=\"source\">\n              <p>\n                <span class=\"progress\">\n                  <span></span>\n                  <span></span>\n                  <span></span>\n                </span>\n              </p>\n            </li>\n            <li class=\"target\">\n              <p>\n                <span class=\"progress\">\n                  <span></span>\n                  <span></span>\n                  <span></span>\n                </span>\n              </p>\n            </li>\n          </ul>\n        </li>\n      </ul>\n      <div class=\"newPhrase\">\n        <input class=\"input\" type=\"text\" value=\"Source Phrase\" tabindex=1 onclick=\"this.value='';\" onblur=\"this.value=!this.value?'Source Phrase':this.value;\">\n        <a class=\"icon save saveSource\" ");
-  data.buffer.push(escapeExpression(helpers.action.call(depth0, "saveSource", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(" title=\"Save\">Add</a>\n        <a class=\"icon save saveTarget\" ");
-  data.buffer.push(escapeExpression(helpers.action.call(depth0, "saveTarget", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(" title=\"Save\">Add</a>\n      </div>\n      <div class=\"addPhrase\">\n        <button ");
+  data.buffer.push("\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.partial || (depth0 && depth0.partial),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "phraseInput", options) : helperMissing.call(depth0, "partial", "phraseInput", options))));
+  data.buffer.push("\n      </ul>\n      <div class=\"addPhrase\">\n        <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "addPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(">+</button>\n      </div>\n    </section>\n  </section>\n</section>\n\n");
+  data.buffer.push(">+</button>\n      </div>\n      <div class=\"newPhrase\">\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'classNames': ("input source"),
+    'value': ("test"),
+    'placeholder': ("Source Phrase"),
+    'tabIndex': (1)
+  },hashTypes:{'classNames': "STRING",'value': "STRING",'placeholder': "STRING",'tabIndex': "INTEGER"},hashContexts:{'classNames': depth0,'value': depth0,'placeholder': depth0,'tabIndex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'classNames': ("input target"),
+    'value': ("test"),
+    'placeholder': ("Target Phrase"),
+    'tabIndex': (2)
+  },hashTypes:{'classNames': "STRING",'value': "STRING",'placeholder': "STRING",'tabIndex': "INTEGER"},hashContexts:{'classNames': depth0,'value': depth0,'placeholder': depth0,'tabIndex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n        \n        <a class=\"icon save saveSource\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "saveSource", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(" title=\"Save\">+</a>\n        <a class=\"icon save saveTarget\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "saveTarget", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(" title=\"Save\">+</a>\n      </div>\n    </section>\n\n  </section>\n</section>\n\n");
   return buffer;
   
 });

@@ -12,6 +12,7 @@
       <a class="icon more" {{action 'moreInfo'}} title="More"></a>
       </div>
     </section>
+
     <section class="moreInfo">
       <section class="background">
         <section class="info">
@@ -52,15 +53,17 @@
         </section>
       </section>
     </section>
+
     <section class="banner">
       <img {{bind-attr src="bannerUrl" alt="User"}} class="fallback">
     </section>
+
     <section class="language-navigation">
       {{#link-to "" classNames="language source" tagName="h1" title=sourceName}}{{sourceName}}{{/link-to}}
-
       <span class="direction"></span>
       {{#link-to "" classNames="language target" tagName="h1" title=targetName}}{{targetName}}{{/link-to}}
     </section>
+
     <section class="phrases">
       <ul class="entries">
         {{#each phrases}}
@@ -68,49 +71,31 @@
             <ul>
               <li class="source">
                 <p>{{sourcePhrase}}</p>
-                {{phrase-options}}
+                {{!-- {{phrase-options}} --}}
               </li>
               <li class="target">
                 <p>{{targetPhrase}}</p>
-                {{phrase-options}}
+                {{!-- {{phrase-options}} --}}
               </li>
             </ul>
           </li>
           {{else}}
           <p class="empty">Shoot! There is nothing here!</p>
         {{/each}}
-        <li class="entry entering">
-          <ul>
-            <li class="source">
-              <p>
-                <span class="progress">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </span>
-              </p>
-            </li>
-            <li class="target">
-              <p>
-                <span class="progress">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </span>
-              </p>
-            </li>
-          </ul>
-        </li>
+        {{partial "phraseInput"}}
       </ul>
-      <div class="newPhrase">
-        <input class="input" type="text" value="Source Phrase" tabindex=1 onclick="this.value='';" onblur="this.value=!this.value?'Source Phrase':this.value;">
-        <a class="icon save saveSource" {{action "saveSource"}} title="Save">Add</a>
-        <a class="icon save saveTarget" {{action "saveTarget"}} title="Save">Add</a>
-      </div>
       <div class="addPhrase">
         <button {{action "addPhrase"}}>+</button>
       </div>
+      <div class="newPhrase">
+        {{input classNames="input source" value="test" placeholder="Source Phrase" tabIndex=1}}
+        {{input classNames="input target" value="test" placeholder="Target Phrase" tabIndex=2}}
+        {{!-- <input class="input" type="text" value="Source Phrase" tabindex=1 onclick="this.value='';" onblur="this.value=!this.value?'Source Phrase':this.value;"> --}}
+        <a class="icon save saveSource" {{action "saveSource"}} title="Save">+</a>
+        <a class="icon save saveTarget" {{action "saveTarget"}} title="Save">+</a>
+      </div>
     </section>
+
   </section>
 </section>
 

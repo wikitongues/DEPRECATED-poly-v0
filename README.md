@@ -1,5 +1,6 @@
 #Wikitongues Phrasebooks, V0
 
+
 ##Getting Started
 
 Requires [Grunt CLI](https://www.npmjs.com/package/grunt-cli)
@@ -12,7 +13,7 @@ Run project with:
 
     $ grunt
 
-Go to [http://localhost:3000](http://localhost:3000)
+Go to [http://localhost:3000/#/dashboard](http://localhost:3000/#/dashboard)
 
 For ease of development, be sure to use the Ember Inspector available for [Chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi?hl=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/).
 
@@ -25,6 +26,8 @@ For ease of development, be sure to use the Ember Inspector available for [Chrom
 * Set up server
 * Design dashboard UI
 * New Book flow	
+* User Object
+* Log In [Page exists](http://localhost:3000/#/login)
 
 ####Visual
 
@@ -45,6 +48,7 @@ For ease of development, be sure to use the Ember Inspector available for [Chrom
 	* Settings
 	* ?
 * Book Settings
+* Kill hashbangs
 
 
 ##About [Wikitongues](http://www.wikitongues.org)

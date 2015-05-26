@@ -1,5 +1,4 @@
 #Wikitongues Phrasebooks, V0
-===
 
 ##Getting Started
 
@@ -17,7 +16,6 @@ Go to [http://localhost:3000](http://localhost:3000)
 
 For ease of development, be sure to use the Ember Inspector available for [Chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi?hl=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/).
 
-===
 
 ##To Do:
 
@@ -48,7 +46,6 @@ For ease of development, be sure to use the Ember Inspector available for [Chrom
 	* ?
 * Book Settings
 
-===
 
 ##About [Wikitongues](http://www.wikitongues.org)
 

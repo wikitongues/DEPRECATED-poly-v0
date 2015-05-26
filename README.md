@@ -1,6 +1,5 @@
 #Wikitongues Phrasebooks, V0
 
-
 ##Getting Started
 
 Requires [Grunt CLI](https://www.npmjs.com/package/grunt-cli)
@@ -27,7 +26,7 @@ For ease of development, be sure to use the Ember Inspector available for [Chrom
 * Design dashboard UI
 * New Book flow	
 * User Object
-* Log In [Page exists](http://localhost:3000/#/login)
+* Log In Page [exists](http://localhost:3000/#/login)
 
 ####Visual
 

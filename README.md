@@ -26,7 +26,7 @@ For ease of development, be sure to use the Ember Inspector available for [Chrom
 * Design dashboard UI
 * New Book flow	
 * User Object
-* Log In Page [exists](http://localhost:3000/#/login)
+* Log In page [exists](http://localhost:3000/#/login)
 
 ####Visual
 

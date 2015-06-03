@@ -1,5 +1,6 @@
 App.Phrase = DS.Model.extend({
   book: DS.belongsTo("book"),
+  createdAt: DS.attr("date"),
   sourcePhrase: DS.attr("string"),
   sourceAudio: DS.attr("string"),
   sourceVideo: DS.attr("string"),

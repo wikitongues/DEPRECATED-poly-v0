@@ -1,5 +1,6 @@
 App.Router.map(function() {
   this.resource("login");
+  this.resource("test");
   this.resource("profile");
   this.resource("team");
   this.resource("mission");

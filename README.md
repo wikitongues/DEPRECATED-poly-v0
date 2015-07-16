@@ -6,7 +6,7 @@ Requires [Grunt CLI](https://www.npmjs.com/package/grunt-cli)
 
 To install dependencies, run:
 
-  $ npm install && bower install
+    $ npm install && bower install
 
 
 Run **back-end** from `./backend` with:

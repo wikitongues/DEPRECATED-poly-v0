@@ -1,0 +1,26 @@
+<li class="company aquired">
+  <div class="wrapper">
+    <a {{bind-attr href="url"}} class="link">
+      <img src="images/logo.png" alt="" class="quotidian-logo">
+      <div class="photoWrapper">
+        {{#if photo}}
+          <span class="helper"></span>
+          <img {{bind-attr src="photo"}}>
+        {{/if}}
+      </div>
+      <span class="info">
+        <p><b>{{name}}</b></p>
+        <p>{{location}}</p>
+        {{#if aquired}}
+          <p class="aquiredBy">Aquired by {{aquired}}</p>
+        {{/if}}
+      </span>
+    </a>
+    <span class="social">
+      <ul>
+        <li><a {{bind-attr href="twitter"}} class="twitter"></a></li>
+        <li><a {{bind-attr href="angelList"}} class="angelList"></a></li>
+      </ul>
+    </span>
+  </div>
+</li>

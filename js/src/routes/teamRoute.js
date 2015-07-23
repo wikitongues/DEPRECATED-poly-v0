@@ -1,5 +1,5 @@
-App.TeamRoute = Ember.Route.extend(App.ResetScroll, {
+App.TeamRoute = Ember.Route.extend({
   model: function() {
-    return this.store.findAll("volunteer")
+    return this.store.findAll("teamMember")
   }
-})
+});

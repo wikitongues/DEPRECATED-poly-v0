@@ -1,0 +1,12 @@
+<h1>{{name}}</h1>
+<div class="social">
+  <ul>
+    {{#if linkedIn}}<li><a class="linkedIn" {{bind-attr href=linkedIn}}></a></li>{{/if}}
+    {{#if twitter}}<li><a class="twitter"  {{bind-attr href=twitter}}></a></li>{{/if}}
+  </ul>
+</div>
+<p class="title">{{title}}</p>
+<div class="image">
+  <img src="http://dummyimage.com/893x429/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+</div>
+<p>{{text}}</p>

@@ -1,11 +1,18 @@
-.mission
-  p
-    a
-      padding 0.2em
-      background lighten($hover, 40%)
-      margin 0 -0.2em
-      border-radius $radius
+.about
+  display inline-block
+  // height 100%
+  width 100%
 
-      &:hover
-        background $hover
-        color initial
+  .content
+    p
+      &.bodyCopy
+        bodyCopy()
+        max-width 700px
+        font-size 1.9em
+
+  footer
+    position absolute
+    width initial
+    left 50px
+    right 50px
+    bottom 0

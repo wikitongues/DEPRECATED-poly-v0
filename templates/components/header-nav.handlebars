@@ -1,0 +1,13 @@
+<span class="mobileTop">
+  {{#link-to "index" classNames="logo" title="Quotidian Ventures"}}
+    <img class="pinwheel" src="images/logo.png" alt="Quotidian Ventures">
+    <img class="logoType" src="images/logoType.png" alt="Quotidian Ventures">
+    <img class="phoneLogo" src="images/phoneLogo.png" alt="Quotidian Ventures">
+  {{/link-to}}
+  <button class="mobileNav" {{action "toggleNavMenu"}}></button>
+</span>
+<ul class="headerNav">
+  <li>{{#link-to "companies" classNames="companies" title="Companies"}}Companies{{/link-to}}</li>
+  <li>{{#link-to "team" classNames="team" title="team"}}Team{{/link-to}}</li>
+  <li>{{#link-to "stream" classNames="stream" title="stream"}}Stream{{/link-to}}</li>
+</ul>

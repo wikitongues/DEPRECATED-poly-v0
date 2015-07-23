@@ -1,37 +1,95 @@
+$columns = 5
+$width = (100/$columns)%
+
 .team
-  h1
-    margin-top 0
+  min-height 90%
+  display inline-block
 
-  ul
-    padding 0
-    margin 0
-    list-style-type none
+  .content
+    .list
+      width 1*$width
+      float left
 
-    li
-      display inline-table
-      width 32.8%
-      margin 30px 0
+      ul
+        padding 0
+        list-style-type none
+        margin-bottom 1.5em
 
-      &.volunteer
-        p
-          margin 0
-          text-align center
+        li
+          &.header
+            font-weight 400
+            margin-bottom .5em
+            color #444
 
-      img
-        padding 5px
-        margin-bottom 15px
+          a
+            line-height 1.5
+
+    .teamBlock
+      width 4*$width
+      float right
+
+      h1
+        margin 5px 0 1px 50px
+        float left
 
       p
-        margin 0
-        font-size .9em
-        font-family $sans
-        text-align:center
+        bodyCopy()
+        margin-bottom 5vw
+        clear left
+        font-size 1.1em
+        line-height 1.5
+        font-weight 300
 
-        &.country
-          font-size .8em
-          color $secondary-blue
+        &.title
+          line-height 2.3
+          margin 0 0 0 50px
+          font-family 'Roboto', sans-serif
 
-  button
-    width 100%
-    font-size 1em
-    button()
+      .social
+        float right
+        display inline-block
+
+        ul
+          display inline-block
+          padding 0
+          list-style-type none
+          margin 3px 0 0 0
+          float left
+
+          li
+            float left
+            margin-right 9px
+
+            &:last-of-type
+              margin-right 0
+
+            a
+              float left
+              height 40px
+              width 40px
+              background-repeat no-repeat
+              background-position center
+              display inline-block
+              margin 0
+              opacity 0.2
+              transition opacity .15s ease-in-out
+
+              &:hover
+                opacity 1
+
+              &.linkedIn
+                background-size 30px
+                background-image url("../images/icons/linkedIn.png")
+
+              &.twitter
+                background-size cover
+                background-image url("../images/icons/twitter.png")
+
+      .image
+        margin 10px 20px 30px 20px
+
+        img
+          transition margin-top 0.5s ease-in-out
+          width 100%
+          clear both
+          display block

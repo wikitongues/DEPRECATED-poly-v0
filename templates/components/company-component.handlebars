@@ -1,0 +1,25 @@
+<li class="company">
+  <div class="wrapper">
+    <a {{bind-attr href="company.url"}} class="link">
+      <div class="photoWrapper">
+        {{#if company.photo}}
+          <span class="helper"></span>
+          <img {{bind-attr src="company.photo"}}>
+        {{/if}}
+      </div>
+      <span class="info">
+        <p><b>{{company.name}}</b></p>
+        <p>{{company.location}}</p>
+        {{#if company.aquired}}
+          <p>Aquired by {{company.aquired}}</p>
+        {{/if}}
+      </span>
+    </a>
+    <span class="social">
+      <ul>
+        <li><a {{bind-attr href="company.twitter"}} class="twitter"></a></li>
+        <li><a {{bind-attr href="company.angelList"}} class="angelList"></a></li>
+      </ul>
+    </span>
+  </div>
+</li>

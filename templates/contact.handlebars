@@ -1,23 +1,22 @@
-{{landing-navigation}}
-{{get-involved-subheader}}
-<section class="page form">
-  <form action="" class="contact-form">
-    <h1>Contact</h1>
-    <p>We're always eager to hear from you!</p>
-    <ul>
-      <li>{{input title="Name" required="true" value=view.name placeholder="Name (Required)"}}</li>
-      <li>{{input title="Email"required="true" type="email" value=view.email placeholder="Email (Required)"}}</li>
-    </ul>
-    {{textarea title="Message"value=view.message placeholder="Message (optional)"}}
-    <button class="submit" type="submit" {{action "submit" target=view}}>Send</button>
-    {{get-involved-email}}
-  </form>
-</section>
-{{!-- {{form-modal title=title text=text}} --}}
-<section class="success">
-    <div class="modal">
-      <h1>Thank you for your message!</h1>
-      <p>We're glad you reached out.</p>
-      <button {{action "closeModal"}}>Okay!</button>
-    </div>
-</section>
+<div class="contact">
+  <div class="content">
+    <section class="labs">
+      <p>Quotidian Ventures operates from Quotidian Labs, our co-working space slap-bang right in the middle of the New York tech world.</p>
+      <p class="address"><a target="_blank" href="https://maps.google.com/maps?ll=40.741235,-73.99129&amp;z=14&amp;t=m&amp;hl=en&amp;gl=US&amp;mapclient=embed&amp;q=16%20W%2022nd%20St%20New%20York%2C%20NY%2010010">16 West 22nd St, 6th Floor, New York, NY 10010</a></p>
+      <div class="map">
+        <iframe width="100%" height="380" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=16+West+22nd+St,+New+York,+NY&amp;aq=&amp;sll=40.741263, -73.991268&amp;sspn=0.022085,0.045447&amp;ie=UTF8&amp;hq=&amp;hnear=16+West+22nd+St,+New+York,+10007&amp;t=m&amp;ll=40.741263, -73.991268&amp;spn=0.030904,0.008497&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+      </div>
+      <p>For more information about Quotidian Labs, email <a href="mailto:labs@quotidian.co">labs@quotidian.co</a></p>
+    </section>
+    <section class="emails">
+      <h1>Contact</h1>
+      <p>To be considered for funding, please email a pitch and some funny pictures to <a href="mailto:hi@quotidian.co">hi@quotidian.co</a></p>
+      <p>For all media inquiries, please contact <a href="mailto:press@quotidian.co">press@quotidian.co</a></p>
+    </section>
+    <section class="assets">
+      <h1>Brand Assets</h1>
+      <p>Horizontal logo: <a href="/images/Horizontal.zip">download</a></p>
+      <p>Vertical logo: <a href="/images/Vertical.zip"> download</a></p>
+    </section>
+  </div>
+</div>

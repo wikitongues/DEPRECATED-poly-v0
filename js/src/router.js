@@ -1,19 +1,10 @@
 App.Router.map(function() {
-  this.resource("login");
-  this.resource("test");
-  this.resource("profile");
-  this.resource("team");
-  this.resource("mission");
-  this.resource("expeditions");
-  this.resource("projects");
-  this.route("get_involved");
-  this.resource("press");
-  this.route("submit");
-  this.route("volunteer");
-  this.route("contact");
-  this.resource("legal");
-  this.resource("releaseForm");
-  this.resource("dashboard");
-  this.resource("book", {path:"/dashboard/:book_id"});
-  this.route("create_book");
+  this.resource("companies");
+  this.resource("team", function() {
+    this.route("teamMember", {path:":teamMember_id"})
+  });
+  this.resource("stream");
+  this.resource("about");
+  this.resource("careers");
+  this.resource("contact");
 })

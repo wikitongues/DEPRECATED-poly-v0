@@ -349,12 +349,6 @@ function program1(depth0,data) {
 function program3(depth0,data) {
   
   
-  data.buffer.push("Careers");
-  }
-
-function program5(depth0,data) {
-  
-  
   data.buffer.push("Contact");
   }
 
@@ -364,17 +358,11 @@ function program5(depth0,data) {
     'title': ("about")
   },hashTypes:{'classNames': "STRING",'title': "STRING"},hashContexts:{'classNames': depth0,'title': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "about", options) : helperMissing.call(depth0, "link-to", "about", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</li>\n  <li>");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'classNames': ("careers"),
-    'title': ("careers")
-  },hashTypes:{'classNames': "STRING",'title': "STRING"},hashContexts:{'classNames': depth0,'title': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "careers", options) : helperMissing.call(depth0, "link-to", "careers", options));
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</li>\n  <li>");
+  data.buffer.push("</li>\n  \n  <li>");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("contact"),
     'title': ("contact")
-  },hashTypes:{'classNames': "STRING",'title': "STRING"},hashContexts:{'classNames': depth0,'title': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "contact", options) : helperMissing.call(depth0, "link-to", "contact", options));
+  },hashTypes:{'classNames': "STRING",'title': "STRING"},hashContexts:{'classNames': depth0,'title': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "contact", options) : helperMissing.call(depth0, "link-to", "contact", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</li>\n</ul>\n<ul class=\"social\">\n  <li><a href=\"https://twitter.com/qventures\">Twitter</a></li>\n  <li><a href=\"https://angel.co/qventures\">AngelList</a></li>\n  <li><a href=\"http://nytm.org/made\">&#9829; NY</a></li>\n</ul>\n");
   return buffer;
@@ -477,10 +465,11 @@ Ember.TEMPLATES["stream"] = Ember.Handlebars.template(function anonymous(Handleb
 /**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  
+  var buffer = '';
 
 
-  data.buffer.push("<div class=\"news\">\n  <div class=\"content\">\n    <h1>News</h1>\n  </div>\n</div>");
+  data.buffer.push("<div class=\"news\">\n  <div class=\"content\">\n    <h1>News</h1>\n    \n  </div>\n</div>");
+  return buffer;
   
 });
 

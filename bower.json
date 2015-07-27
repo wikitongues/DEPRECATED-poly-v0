@@ -1,11 +1,11 @@
 {
-  "name": "ember-homepage",
+  "name": "Quotidian Ventures",
   "version": "0.0.0",
-  "homepage": "https://github.com/wikitongues/ember-homepage",
+  "homepage": "https://github.com/FredericoAndrade/qve",
   "authors": [
     "Freddie Andrade <faandrade@gmail.com>"
   ],
-  "description": "Every Language in the World",
+  "description": "Website",
   "main": "index.html",
   "license": "MIT",
   "ignore": [

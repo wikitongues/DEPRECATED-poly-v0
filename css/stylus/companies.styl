@@ -1,15 +1,9 @@
-$rows = 4
-// 3:25.7vw
-// 4:18.4vw
-// 5:14.01vw
-$company-width = (100 / $rows)%
-
 .companies
-  display inline-block
-
   .content
     ul
-      display inline-block
+      max-width 1140px
+      margin auto
+      display table
       list-style-type none
       padding 0
 
@@ -17,20 +11,25 @@ $company-width = (100 / $rows)%
         padding .5em
         box-sizing border-box
         float left
-        width $company-width
         margin 0
         display inline-block
 
         &:hover
           .wrapper
+            box-shadow 0 2px 4px rgba(0,0,0,0.2)
+
+            .link
+              .aquired
+                border-top-width 0
+                border-left-width 0
+
             span
-              opacity 1
+              opacity .95
 
         .wrapper
           position relative
-          border 3px black solid
+          border 3px #ddd solid
           height 18.61vw
-          box-shadow 0 2px 4px rgba(0,0,0,0.2)
           overflow hidden
 
           .link
@@ -39,29 +38,25 @@ $company-width = (100 / $rows)%
             width 100%
             height 100%
             display inline-block
+            box-shadow 0 1px 2px rgba(0,0,0,0.1)
 
-            .quotidian-logo
+            .aquired
+              width 0
+              height 0
+              border-top 25px solid #ddd
+              border-left 25px solid transparent
+              box-shadow 0 2px 4px rgba(0,0,0,0.1)
               position absolute
-              top 0
               right 0
-              height 2.5vw
-              width auto
-              padding 10px
-              z-index 2
+              top 0
+              z-index 10
+              transition border-top-width .02s ease-in-out, border-left-width .02s ease-in-out
 
-            .photoWrapper
+            .companyLogo
               height 100%
-              vertical-align middle
-
-              .helper
-                display inline-block
-                height 100%
-                vertical-align middle
-
-              img
-                margin 0 .2%
-                display inline-block
-                width 95%
+              background-size 80%
+              background-position center
+              background-repeat no-repeat
 
           span
             opacity 0
@@ -69,7 +64,6 @@ $company-width = (100 / $rows)%
             transition opacity .1s ease-in-out
 
             &.info
-
               position absolute
               bottom 0
               left 0

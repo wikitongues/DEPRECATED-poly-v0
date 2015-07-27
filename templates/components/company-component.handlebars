@@ -2,10 +2,8 @@
   <div class="wrapper">
     <a {{bind-attr href="company.url"}} class="link">
       <div class="photoWrapper">
-        {{#if company.photo}}
-          <span class="helper"></span>
-          <img {{bind-attr src="company.photo"}}>
-        {{/if}}
+        <span class="helper"></span>
+        <img {{bind-attr src="company.photo"}}>
       </div>
       <span class="info">
         <p><b>{{company.name}}</b></p>

@@ -2,17 +2,15 @@
   <div class="content">
     <ul>
       {{#each}}
-        {{#if aquired}}
-        <li class="company aquired">
+        <li class="company">
           <div class="wrapper">
             <a {{bind-attr href="url"}} class="link">
-              <img src="images/logo.png" alt="" class="quotidian-logo">
-              <div class="photoWrapper">
-                {{#if photo}}
-                  <span class="helper"></span>
-                  <img {{bind-attr src="photo"}}>
-                {{/if}}
-              </div>
+              {{#if aquired}}
+                <div class="aquired"></div>
+              {{/if}}
+              {{#if photo}}
+                <div class="companyLogo" {{bind-attr style='photoUrl'}}></div>
+              {{/if}}
               <span class="info">
                 <p><b>{{name}}</b></p>
                 <p>{{location}}</p>
@@ -29,33 +27,6 @@
             </span>
           </div>
         </li>
-        {{else}}
-        <li class="company">
-          <div class="wrapper">
-            <a {{bind-attr href="url"}} class="link">
-              <div class="photoWrapper">
-                {{#if photo}}
-                  <span class="helper"></span>
-                  <img {{bind-attr src="photo"}}>
-                {{/if}}
-              </div>
-              <span class="info">
-                <p><b>{{name}}</b></p>
-                <p>{{location}}</p>
-                {{#if aquired}}
-                  <p>Aquired by {{aquired}}</p>
-                {{/if}}
-              </span>
-            </a>
-            <span class="social">
-              <ul>
-                <li><a {{bind-attr href="twitter"}} class="twitter"></a></li>
-                <li><a {{bind-attr href="angelList"}} class="angelList"></a></li>
-              </ul>
-            </span>
-          </div>
-        </li>
-        {{/if}}
       {{/each}}
     </ul>
   </div>

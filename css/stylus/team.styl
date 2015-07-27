@@ -6,6 +6,7 @@ $width = (100/$columns)%
   display inline-block
 
   .content
+    min-height 73vh
     .list
       width 1*$width
       float left
@@ -34,15 +35,16 @@ $width = (100/$columns)%
 
       p
         bodyCopy()
-        margin-bottom 5vw
-        clear left
+        margin 0
+        padding 0 3em
+        box-sizing border-box
+        float left
         font-size 1.1em
         line-height 1.5
         font-weight 300
 
         &.title
           line-height 2.3
-          margin 0 0 0 50px
           font-family 'Roboto', sans-serif
 
       .social
@@ -86,6 +88,7 @@ $width = (100/$columns)%
                 background-image url("../images/icons/twitter.png")
 
       .image
+        float left
         margin 10px 20px 30px 20px
 
         img

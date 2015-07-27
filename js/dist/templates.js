@@ -20,23 +20,14 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 
 function program1(depth0,data) {
   
-  var buffer = '', stack1;
-  data.buffer.push("\n      ");
-  stack1 = helpers['if'].call(depth0, "director", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],data:data});
+  var buffer = '', stack1, helper, options;
+  data.buffer.push("\n        <li>");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "team.teamMember", "", options) : helperMissing.call(depth0, "link-to", "team.teamMember", "", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    ");
+  data.buffer.push("</li>\n    ");
   return buffer;
   }
 function program2(depth0,data) {
-  
-  var buffer = '', stack1, helper, options;
-  data.buffer.push("\n        <li>");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "team.teamMember", "", options) : helperMissing.call(depth0, "link-to", "team.teamMember", "", options));
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</li>\n      ");
-  return buffer;
-  }
-function program3(depth0,data) {
   
   var stack1;
   stack1 = helpers._triageMustache.call(depth0, "name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
@@ -44,21 +35,8 @@ function program3(depth0,data) {
   else { data.buffer.push(''); }
   }
 
-function program5(depth0,data) {
-  
-  var buffer = '', stack1;
-  data.buffer.push("\n      ");
-  stack1 = helpers.unless.call(depth0, "director", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    ");
-  return buffer;
-  }
-
-  data.buffer.push("<div class=\"list\">\n  <ul>\n  <li class=\"header\">Managing Directors</li>\n    ");
+  data.buffer.push("<div class=\"list\">\n  <ul>\n    ");
   stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  </ul>\n  <ul>\n  <li class=\"header\">Venture Partners</li>\n    ");
-  stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n  </ul>\n</div>");
   return buffer;
@@ -117,81 +95,24 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = '', stack1;
-  data.buffer.push("\n        ");
-  stack1 = helpers['if'].call(depth0, "aquired", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(7, program7, data),fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      ");
-  return buffer;
-  }
-function program2(depth0,data) {
-  
-  var buffer = '', stack1;
-  data.buffer.push("\n        <li class=\"company aquired\">\n          <div class=\"wrapper\">\n            <a ");
-  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-    'href': ("url")
-  },hashTypes:{'href': "STRING"},hashContexts:{'href': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" class=\"link\">\n              <img src=\"images/logo.png\" alt=\"\" class=\"quotidian-logo\">\n              <div class=\"photoWrapper\">\n                ");
-  stack1 = helpers['if'].call(depth0, "photo", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n              </div>\n              <span class=\"info\">\n                <p><b>");
-  stack1 = helpers._triageMustache.call(depth0, "name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</b></p>\n                <p>");
-  stack1 = helpers._triageMustache.call(depth0, "location", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n                ");
-  stack1 = helpers['if'].call(depth0, "aquired", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n              </span>\n            </a>\n            <span class=\"social\">\n              <ul>\n                <li><a ");
-  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-    'href': ("twitter")
-  },hashTypes:{'href': "STRING"},hashContexts:{'href': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" class=\"twitter\"></a></li>\n                <li><a ");
-  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-    'href': ("angelList")
-  },hashTypes:{'href': "STRING"},hashContexts:{'href': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" class=\"angelList\"></a></li>\n              </ul>\n            </span>\n          </div>\n        </li>\n        ");
-  return buffer;
-  }
-function program3(depth0,data) {
-  
-  var buffer = '';
-  data.buffer.push("\n                  <span class=\"helper\"></span>\n                  <img ");
-  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-    'src': ("photo")
-  },hashTypes:{'src': "STRING"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(">\n                ");
-  return buffer;
-  }
-
-function program5(depth0,data) {
-  
-  var buffer = '', stack1;
-  data.buffer.push("\n                  <p class=\"aquiredBy\">Aquired by ");
-  stack1 = helpers._triageMustache.call(depth0, "aquired", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n                ");
-  return buffer;
-  }
-
-function program7(depth0,data) {
-  
-  var buffer = '', stack1;
   data.buffer.push("\n        <li class=\"company\">\n          <div class=\"wrapper\">\n            <a ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'href': ("url")
   },hashTypes:{'href': "STRING"},hashContexts:{'href': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" class=\"link\">\n              <div class=\"photoWrapper\">\n                ");
-  stack1 = helpers['if'].call(depth0, "photo", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["ID"],data:data});
+  data.buffer.push(" class=\"link\">\n              ");
+  stack1 = helpers['if'].call(depth0, "aquired", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n              </div>\n              <span class=\"info\">\n                <p><b>");
+  data.buffer.push("\n              ");
+  stack1 = helpers['if'].call(depth0, "photo", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n              <span class=\"info\">\n                <p><b>");
   stack1 = helpers._triageMustache.call(depth0, "name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</b></p>\n                <p>");
   stack1 = helpers._triageMustache.call(depth0, "location", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</p>\n                ");
-  stack1 = helpers['if'].call(depth0, "aquired", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[depth0],types:["ID"],data:data});
+  stack1 = helpers['if'].call(depth0, "aquired", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n              </span>\n            </a>\n            <span class=\"social\">\n              <ul>\n                <li><a ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
@@ -201,13 +122,30 @@ function program7(depth0,data) {
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'href': ("angelList")
   },hashTypes:{'href': "STRING"},hashContexts:{'href': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" class=\"angelList\"></a></li>\n              </ul>\n            </span>\n          </div>\n        </li>\n        ");
+  data.buffer.push(" class=\"angelList\"></a></li>\n              </ul>\n            </span>\n          </div>\n        </li>\n      ");
   return buffer;
   }
-function program8(depth0,data) {
+function program2(depth0,data) {
+  
+  
+  data.buffer.push("\n                <div class=\"aquired\"></div>\n              ");
+  }
+
+function program4(depth0,data) {
+  
+  var buffer = '';
+  data.buffer.push("\n                <div class=\"companyLogo\" ");
+  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+    'style': ("photoUrl")
+  },hashTypes:{'style': "STRING"},hashContexts:{'style': depth0},contexts:[],types:[],data:data})));
+  data.buffer.push("></div>\n              ");
+  return buffer;
+  }
+
+function program6(depth0,data) {
   
   var buffer = '', stack1;
-  data.buffer.push("\n                  <p>Aquired by ");
+  data.buffer.push("\n                  <p class=\"aquiredBy\">Aquired by ");
   stack1 = helpers._triageMustache.call(depth0, "aquired", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</p>\n                ");
@@ -286,17 +224,6 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 
 function program1(depth0,data) {
   
-  var buffer = '';
-  data.buffer.push("\n          <span class=\"helper\"></span>\n          <img ");
-  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-    'src': ("company.photo")
-  },hashTypes:{'src': "STRING"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(">\n        ");
-  return buffer;
-  }
-
-function program3(depth0,data) {
-  
   var buffer = '', stack1;
   data.buffer.push("\n          <p>Aquired by ");
   stack1 = helpers._triageMustache.call(depth0, "company.aquired", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
@@ -309,17 +236,18 @@ function program3(depth0,data) {
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'href': ("company.url")
   },hashTypes:{'href': "STRING"},hashContexts:{'href': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" class=\"link\">\n      <div class=\"photoWrapper\">\n        ");
-  stack1 = helpers['if'].call(depth0, "company.photo", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      </div>\n      <span class=\"info\">\n        <p><b>");
+  data.buffer.push(" class=\"link\">\n      <div class=\"photoWrapper\">\n        <span class=\"helper\"></span>\n        <img ");
+  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+    'src': ("company.photo")
+  },hashTypes:{'src': "STRING"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
+  data.buffer.push(">\n      </div>\n      <span class=\"info\">\n        <p><b>");
   stack1 = helpers._triageMustache.call(depth0, "company.name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</b></p>\n        <p>");
   stack1 = helpers._triageMustache.call(depth0, "company.location", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</p>\n        ");
-  stack1 = helpers['if'].call(depth0, "company.aquired", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["ID"],data:data});
+  stack1 = helpers['if'].call(depth0, "company.aquired", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n      </span>\n    </a>\n    <span class=\"social\">\n      <ul>\n        <li><a ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
@@ -343,26 +271,14 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  data.buffer.push("About");
-  }
-
-function program3(depth0,data) {
-  
-  
   data.buffer.push("Contact");
   }
 
-  data.buffer.push("<ul class=\"org\">\n  <li>");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'classNames': ("about"),
-    'title': ("about")
-  },hashTypes:{'classNames': "STRING",'title': "STRING"},hashContexts:{'classNames': depth0,'title': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "about", options) : helperMissing.call(depth0, "link-to", "about", options));
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</li>\n  \n  <li>");
+  data.buffer.push("<ul class=\"org\">\n  \n  \n  <li>");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("contact"),
     'title': ("contact")
-  },hashTypes:{'classNames': "STRING",'title': "STRING"},hashContexts:{'classNames': depth0,'title': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "contact", options) : helperMissing.call(depth0, "link-to", "contact", options));
+  },hashTypes:{'classNames': "STRING",'title': "STRING"},hashContexts:{'classNames': depth0,'title': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "contact", options) : helperMissing.call(depth0, "link-to", "contact", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</li>\n</ul>\n<ul class=\"social\">\n  <li><a href=\"https://twitter.com/qventures\">Twitter</a></li>\n  <li><a href=\"https://angel.co/qventures\">AngelList</a></li>\n  <li><a href=\"http://nytm.org/made\">&#9829; NY</a></li>\n</ul>\n");
   return buffer;

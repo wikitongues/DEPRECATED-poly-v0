@@ -1,18 +1,7 @@
 <div class="list">
   <ul>
-  <li class="header">Managing Directors</li>
     {{#each}}
-      {{#if director}}
         <li>{{#link-to "team.teamMember" this}}{{name}}{{/link-to}}</li>
-      {{/if}}
-    {{/each}}
-  </ul>
-  <ul>
-  <li class="header">Venture Partners</li>
-    {{#each}}
-      {{#unless director}}
-        <li>{{#link-to "team.teamMember" this}}{{name}}{{/link-to}}</li>
-      {{/unless}}
     {{/each}}
   </ul>
 </div>
